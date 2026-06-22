@@ -28,9 +28,9 @@ const CARD_DATA = [
     id: 'now',
     label: 'Now',
     tiles: [
-      { kind: 'card', tint: 'green', label: 'Shipping', x: -13, y: 7, rot: -10 },
-      { kind: 'face', src: '/genmoji.png', x: 0, y: -3, rot: 0 },
-      { kind: 'card', tint: 'amber', label: 'Building', x: 13, y: 7, rot: 10 },
+      { kind: 'card', tint: 'green', label: 'Shipping', x: -13, y: 7, rot: -11 },
+      { kind: 'card', tint: 'amber', label: 'Building', x: 13, y: 7, rot: 11 },
+      { kind: 'face', src: '/genmoji.png', x: 0, y: -3, rot: -2 },
     ],
   },
   {
