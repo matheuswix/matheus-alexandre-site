@@ -128,8 +128,10 @@ const NOW_ITEMS = [
 const LOGOS = [
   { name: 'NTT', src: '/logos/ntt.svg' },
   { name: 'Banco do Brasil', src: '/logos/banco-do-brasil.svg' },
-  { name: 'AB InBev', src: '/logos/ab-inbev.svg' },
   { name: 'Wix', src: '/logos/wix.svg' },
+  { name: 'Marisa', src: '/logos/marisa.svg' },
+  { name: 'Cultura Inglesa', src: '/logos/cultura-inglesa.svg' },
+  { name: 'Billa', src: '/logos/billa.svg' },
 ]
 
 const CONTACTS = [
