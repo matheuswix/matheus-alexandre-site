@@ -124,6 +124,16 @@ const NOW_ITEMS = [
   { n: '03', text: 'Growing educa.social and helping early teams move faster.' },
 ]
 
+const FUN_FACTS = [
+  { emoji: '🌅', title: 'Born in Natal, RN', sub: 'Now based in São Paulo.' },
+  { emoji: '🏋️', title: 'CrossFit, gym & swim', sub: 'Training is non-negotiable.' },
+  { emoji: '🏃', title: 'Out for a run most mornings', sub: 'Clears the head, fuels the focus.' },
+  { emoji: '✈️', title: 'Always planning the next trip', sub: 'Travel keeps me curious.' },
+]
+
+// Personal photos for the About gallery — add entries once the files are in /public/about.
+const GALLERY = []
+
 // Client logos for the homepage proof strip. Replace the files in /public/logos
 // with real brand assets (same paths) — monochrome treatment is applied in CSS.
 const LOGOS = [
@@ -330,6 +340,37 @@ function NowModal() {
           <span className="now-item-text">{item.text}</span>
         </div>
       ))}
+
+      <div className="off-clock">
+        <div className="section-index">OFF THE CLOCK</div>
+        <p className="now-bio">
+          When I&#39;m not shipping, you&#39;ll find me training — CrossFit, swimming, or out for a
+          run. Born in Natal, now based in São Paulo, always planning the next trip. The
+          consistency I bring to training is the same one I bring to the work.
+        </p>
+
+        {GALLERY.length > 0 && (
+          <div className="gallery">
+            {GALLERY.map((g) => (
+              <div key={g.src} className="gallery-item">
+                <img src={g.src} alt={g.alt} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div className="fun-facts">
+          {FUN_FACTS.map((f) => (
+            <div key={f.title} className="fun-fact">
+              <span className="fun-fact-emoji">{f.emoji}</span>
+              <span className="fun-fact-body">
+                <span className="fun-fact-title">{f.title}</span>
+                <span className="fun-fact-sub">{f.sub}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
