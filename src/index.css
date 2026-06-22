@@ -386,17 +386,24 @@ a {
 }
 
 /* ---------- Work modal ---------- */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
 .project-row {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 16px 12px;
-  border-top: 1px solid #efefef;
+  border: 1px solid #efefef;
   border-radius: 12px;
-  transition: background 0.25s ease;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 .project-row:hover {
   background: #f7f7f5;
+  border-color: #e2e2e2;
 }
 .row-index {
   font-family: 'Geist Mono', monospace;
@@ -512,6 +519,24 @@ a {
   font-size: 11px;
   letter-spacing: 0.5px;
   color: #bdbdbd;
+  overflow: hidden;
+}
+/* Portrait phone screenshots */
+.shot--portrait {
+  width: 150px;
+  height: 320px;
+}
+/* A shot holding a real image drops the dashed placeholder styling */
+.shot:has(.shot-img) {
+  border: 1px solid #e7e7e7;
+  background: #fff;
+}
+.shot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 /* ---------- Services modal ---------- */

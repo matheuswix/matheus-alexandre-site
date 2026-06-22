@@ -57,8 +57,9 @@ const FEATURED = [
     url: 'https://educa.social/',
     desc: 'A social platform connecting schools, teachers, and families. I led the product build end to end — architecture, real-time feeds, and the interface — taking it from concept to a live product used by real school communities.',
     shots: [
-      { id: 'shot-educa-1', placeholder: 'Drop a screenshot' },
-      { id: 'shot-educa-2', placeholder: 'Drop a screenshot' },
+      { id: 'shot-educa-1', src: '/shots/educa-1.png', alt: 'educa.social — home dashboard with generated school content', portrait: true },
+      { id: 'shot-educa-2', src: '/shots/educa-2.png', alt: 'educa.social — brand identity setup screen', portrait: true },
+      { id: 'shot-educa-3', src: '/shots/educa-3.png', alt: 'educa.social — visual style selection screen', portrait: true },
     ],
   },
   {
@@ -170,17 +171,19 @@ function WorkModal() {
       <h2>Things I&#39;ve shipped with founders</h2>
       <p className="modal-subtitle">Products taken from idea to live — design, build, and launch.</p>
 
-      {PROJECTS.map((p) => (
-        <a key={p.n} className="project-row" href={p.url} target="_blank" rel="noopener noreferrer">
-          <span className="row-index">{p.n}</span>
-          <span className="project-main">
-            <span className="project-name">{p.name}</span>
-            <span className="project-desc">{p.desc}</span>
-          </span>
-          <span className="project-host">{p.host}</span>
-          <span className="row-arrow">&#8599;</span>
-        </a>
-      ))}
+      <div className="project-list">
+        {PROJECTS.map((p) => (
+          <a key={p.n} className="project-row" href={p.url} target="_blank" rel="noopener noreferrer">
+            <span className="row-index">{p.n}</span>
+            <span className="project-main">
+              <span className="project-name">{p.name}</span>
+              <span className="project-desc">{p.desc}</span>
+            </span>
+            <span className="project-host">{p.host}</span>
+            <span className="row-arrow">&#8599;</span>
+          </a>
+        ))}
+      </div>
 
       <div className="featured-head">
         <div className="section-index">FEATURED</div>
@@ -198,13 +201,18 @@ function WorkModal() {
             </a>
           </div>
           <p className="featured-desc">{f.desc}</p>
-          {f.shots.length > 0 && (
+          {f.shots.some((s) => s.src) && (
             <div className="shots">
-              {f.shots.map((shot) => (
-                <div key={shot.id} className="shot">
-                  {shot.placeholder}
-                </div>
-              ))}
+              {f.shots
+                .filter((shot) => shot.src)
+                .map((shot) => (
+                  <div
+                    key={shot.id}
+                    className={'shot' + (shot.portrait ? ' shot--portrait' : '')}
+                  >
+                    <img className="shot-img" src={shot.src} alt={shot.alt} loading="lazy" />
+                  </div>
+                ))}
             </div>
           )}
         </div>
