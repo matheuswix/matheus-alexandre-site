@@ -413,6 +413,11 @@ a {
 .tile-shot--face {
   object-position: center;
 }
+.tile-logo {
+  max-width: 80%;
+  max-height: 58%;
+  object-fit: contain;
+}
 .tile--face {
   background: #cfe0db;
   border: 1px solid #bcd2cb;

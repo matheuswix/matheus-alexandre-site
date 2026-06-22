@@ -11,9 +11,9 @@ const CARD_DATA = [
     id: 'work',
     label: 'Work',
     tiles: [
-      { kind: 'shot', src: '/shots/sherpa-mobile.png', x: -16, y: 8, rot: -11 },
-      { kind: 'shot', src: '/shots/educa-1.png', x: 0, y: -2, rot: 1 },
-      { kind: 'shot', src: '/shots/locator-ritas.png', x: 16, y: 7, rot: 10 },
+      { kind: 'logo', tint: 'blue', src: '/logos/ntt-logo.svg', x: -16, y: 8, rot: -11 },
+      { kind: 'logo', tint: 'amber', src: '/logos/ab-inbev.svg', x: 0, y: -2, rot: 1 },
+      { kind: 'logo', tint: 'green', src: '/logos/banco-do-brasil-v2.svg', x: 16, y: 7, rot: 10 },
     ],
   },
   {
@@ -220,6 +220,8 @@ function Card({ card, index, hovered, onHover, onOpen }) {
                 alt=""
                 loading="lazy"
               />
+            ) : tile.kind === 'logo' ? (
+              <img className="tile-logo" src={tile.src} alt="" loading="lazy" />
             ) : (
               <>
                 <span className="tile-dot" />
