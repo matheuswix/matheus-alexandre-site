@@ -126,9 +126,9 @@ const NOW_ITEMS = [
 // Client logos for the homepage proof strip. Replace the files in /public/logos
 // with real brand assets (same paths) — monochrome treatment is applied in CSS.
 const LOGOS = [
-  { name: 'NTT', src: '/logos/ntt.svg' },
-  { name: 'Banco do Brasil', src: '/logos/banco-do-brasil.svg' },
-  { name: 'Wix', src: '/logos/wix.svg' },
+  { name: 'NTT', src: '/logos/ntt-logo.svg' },
+  { name: 'Banco do Brasil', src: '/logos/banco-do-brasil-logo.svg' },
+  { name: 'Wix', src: '/logos/wix-logo.svg' },
   { name: 'Marisa', src: '/logos/marisa.svg' },
   { name: 'Cultura Inglesa', src: '/logos/cultura-inglesa.svg' },
   { name: 'Billa', src: '/logos/billa.svg' },
@@ -431,10 +431,16 @@ export default function App() {
         <footer className="footer">
           <div className="logos">
             <span className="logos-label">IN&nbsp;PRODUCTION&nbsp;AT</span>
-            <div className="logos-row">
-              {LOGOS.map((l) => (
-                <img key={l.name} className="logo" src={l.src} alt={l.name} />
-              ))}
+            <div className="logos-marquee">
+              <div className="logos-track">
+                {[0, 1].map((copy) => (
+                  <div className="logos-group" key={copy} aria-hidden={copy === 1}>
+                    {LOGOS.map((l) => (
+                      <img key={l.name} className="logo" src={l.src} alt={l.name} />
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="cta-row">
