@@ -532,12 +532,19 @@ a {
   color: #bdbdbd;
   overflow: hidden;
 }
-/* Portrait phone screenshots — fill the row evenly, keeping the phone aspect. */
+/* Shots fill the row, flex-grow set to each one's aspect ratio so mixed
+   portrait/landscape shots line up at the same height. */
 .shot--portrait {
-  flex: 1 1 0;
+  flex: 0.46 1 0;
   width: auto;
   height: auto;
   aspect-ratio: 600 / 1300;
+}
+.shot--wide {
+  flex: 1.66 1 0;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1000 / 602;
 }
 /* A shot holding a real image drops the dashed placeholder styling */
 .shot:has(.shot-img) {

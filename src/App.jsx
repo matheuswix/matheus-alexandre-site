@@ -57,9 +57,9 @@ const FEATURED = [
     url: 'https://educa.social/',
     desc: 'A social platform connecting schools, teachers, and families. I led the product build end to end — architecture, real-time feeds, and the interface — taking it from concept to a live product used by real school communities.',
     shots: [
-      { id: 'shot-educa-1', src: '/shots/educa-1.png', alt: 'educa.social — home dashboard with generated school content', portrait: true },
-      { id: 'shot-educa-2', src: '/shots/educa-2.png', alt: 'educa.social — brand identity setup screen', portrait: true },
-      { id: 'shot-educa-3', src: '/shots/educa-3.png', alt: 'educa.social — visual style selection screen', portrait: true },
+      { id: 'shot-educa-1', src: '/shots/educa-1.png', alt: 'educa.social — home dashboard with generated school content', variant: 'portrait' },
+      { id: 'shot-educa-2', src: '/shots/educa-2.png', alt: 'educa.social — brand identity setup screen', variant: 'portrait' },
+      { id: 'shot-educa-3', src: '/shots/educa-3.png', alt: 'educa.social — visual style selection screen', variant: 'portrait' },
     ],
   },
   {
@@ -68,7 +68,10 @@ const FEATURED = [
     host: 'sherpa42.com.br',
     url: 'https://www.sherpa42.com.br/',
     desc: 'Digital agency delivering websites and product work for clients. Hands-on across design and build, shipping polished, performant sites on tight timelines.',
-    shots: [{ id: 'shot-sherpa-1', placeholder: 'Drop a screenshot' }],
+    shots: [
+      { id: 'shot-sherpa-desktop', src: '/shots/sherpa-desktop.png', alt: 'Sherpa42 — agency website, desktop view', variant: 'wide' },
+      { id: 'shot-sherpa-mobile', src: '/shots/sherpa-mobile.png', alt: 'Sherpa42 — agency website, mobile view', variant: 'portrait' },
+    ],
   },
 ]
 
@@ -204,10 +207,7 @@ function WorkModal() {
                 {f.shots
                   .filter((shot) => shot.src)
                   .map((shot) => (
-                    <div
-                      key={shot.id}
-                      className={'shot' + (shot.portrait ? ' shot--portrait' : '')}
-                    >
+                    <div key={shot.id} className={'shot shot--' + shot.variant}>
                       <img className="shot-img" src={shot.src} alt={shot.alt} loading="lazy" />
                     </div>
                   ))}
