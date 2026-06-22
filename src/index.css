@@ -393,25 +393,30 @@ a {
 }
 
 /* ---------- Work modal ---------- */
+/* White section box holding the intro + project list (matches the other modals). */
+.modal-section {
+  background: #fff;
+  border-radius: 20px;
+  padding: 26px 26px 24px;
+}
 .project-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 6px;
 }
 .project-row {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 18px 16px;
-  background: #fff;
+  background: #f6f6f4;
+  border: 1px solid #eeeeec;
   border-radius: 16px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background 0.25s ease;
 }
 .project-row:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  background: #f0f0ee;
 }
 .row-index {
   font-family: 'Geist Mono', monospace;

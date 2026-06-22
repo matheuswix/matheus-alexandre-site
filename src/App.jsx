@@ -167,22 +167,24 @@ function Card({ card, index, hovered, onHover, onOpen }) {
 function WorkModal() {
   return (
     <div>
-      <div className="section-index">01 / WORK</div>
-      <h2>Things I&#39;ve shipped with founders</h2>
-      <p className="modal-subtitle">Products taken from idea to live — design, build, and launch.</p>
+      <div className="modal-section">
+        <div className="section-index">01 / WORK</div>
+        <h2>Things I&#39;ve shipped with founders</h2>
+        <p className="modal-subtitle">Products taken from idea to live — design, build, and launch.</p>
 
-      <div className="project-list">
-        {PROJECTS.map((p) => (
-          <a key={p.n} className="project-row" href={p.url} target="_blank" rel="noopener noreferrer">
-            <span className="row-index">{p.n}</span>
-            <span className="project-main">
-              <span className="project-name">{p.name}</span>
-              <span className="project-desc">{p.desc}</span>
-            </span>
-            <span className="project-host">{p.host}</span>
-            <span className="row-arrow">&#8599;</span>
-          </a>
-        ))}
+        <div className="project-list">
+          {PROJECTS.map((p) => (
+            <a key={p.n} className="project-row" href={p.url} target="_blank" rel="noopener noreferrer">
+              <span className="row-index">{p.n}</span>
+              <span className="project-main">
+                <span className="project-name">{p.name}</span>
+                <span className="project-desc">{p.desc}</span>
+              </span>
+              <span className="project-host">{p.host}</span>
+              <span className="row-arrow">&#8599;</span>
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className="featured-list">
