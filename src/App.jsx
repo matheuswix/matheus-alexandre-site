@@ -406,7 +406,7 @@ export default function App() {
         {/* Header: monogram doubles as "home" — closes any open modal */}
         <header className="header">
           <div className="monogram" title="Matheus Alexandre" onClick={close}>
-            MA
+            <img className="monogram-img" src="/matheus.jpg" alt="Matheus Alexandre" />
             <span className="monogram-dot" style={{ background: ACCENT }} />
           </div>
         </header>
