@@ -44,7 +44,7 @@ const CARD_DATA = [
 ]
 
 const PROJECTS = [
-  { n: '01', name: 'educa.social', desc: 'A social platform for schools & educators', host: 'educa.social', url: 'https://educa.social/' },
+  { n: '01', name: 'educa.social', desc: 'AI that creates schools’ social media content', host: 'educa.social', url: 'https://educa.social/' },
   { n: '02', name: 'Sherpa42', desc: 'Digital agency — sites & product work', host: 'sherpa42.com.br', url: 'https://www.sherpa42.com.br/' },
   { n: '03', name: 'AB InBev — Product Locator', desc: 'A store-locator widget reused across their brand sites', host: 'gooseisland.com', url: 'https://www.gooseisland.com/find-beer' },
   { n: '04', name: 'Banco do Brasil — MPE Week', desc: 'A bespoke marketplace built for Banco do Brasil', host: 'bb.com.br', url: 'https://www.bb.com.br/' },
@@ -57,7 +57,7 @@ const FEATURED = [
     tag: 'FOUNDING ENGINEER',
     host: 'educa.social',
     url: 'https://educa.social/',
-    desc: 'A social platform connecting schools, teachers, and families. I led the product build end to end — architecture, real-time feeds, and the interface — taking it from concept to a live product used by real school communities.',
+    desc: 'An AI marketing platform that helps schools create on-brand social media content — posts, stories, and reels — in minutes, with no designer or agency. It learns each school’s brand, generates the artwork and captions, and schedules across Instagram, Facebook, and WhatsApp. I led the product build end to end: architecture, the content-generation pipeline, and the interface — from concept to a live product schools use today.',
     shots: [
       { id: 'shot-educa-1', src: '/shots/educa-1.png', alt: 'educa.social — home dashboard with generated school content', variant: 'portrait' },
       { id: 'shot-educa-2', src: '/shots/educa-2.png', alt: 'educa.social — brand identity setup screen', variant: 'portrait' },
