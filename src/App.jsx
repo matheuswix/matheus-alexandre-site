@@ -123,6 +123,15 @@ const NOW_ITEMS = [
   { n: '03', text: 'Growing educa.social and helping early teams move faster.' },
 ]
 
+// Client logos for the homepage proof strip. Replace the files in /public/logos
+// with real brand assets (same paths) — monochrome treatment is applied in CSS.
+const LOGOS = [
+  { name: 'NTT', src: '/logos/ntt.svg' },
+  { name: 'Banco do Brasil', src: '/logos/banco-do-brasil.svg' },
+  { name: 'AB InBev', src: '/logos/ab-inbev.svg' },
+  { name: 'Wix', src: '/logos/wix.svg' },
+]
+
 const CONTACTS = [
   { kind: 'EMAIL', handle: 'hello@matheus.cc', url: 'mailto:hello@matheus.cc', target: '_self' },
   { kind: 'GITHUB', handle: '@matheuswix', url: 'https://github.com/matheuswix', target: '_blank' },
@@ -418,6 +427,14 @@ export default function App() {
 
         {/* Footer: CTAs + footnote */}
         <footer className="footer">
+          <div className="logos">
+            <span className="logos-label">IN&nbsp;PRODUCTION&nbsp;AT</span>
+            <div className="logos-row">
+              {LOGOS.map((l) => (
+                <img key={l.name} className="logo" src={l.src} alt={l.name} />
+              ))}
+            </div>
+          </div>
           <div className="cta-row">
             <a className="btn btn-primary" href="mailto:hello@matheus.cc">
               Start a project

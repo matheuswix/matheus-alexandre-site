@@ -278,6 +278,37 @@ a {
   gap: 16px;
   padding-bottom: 12px;
 }
+.logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+.logos-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 3px;
+  color: #c2c2c2;
+  font-weight: 500;
+}
+.logos-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+.logo {
+  height: 22px;
+  width: auto;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.logo:hover {
+  opacity: 0.85;
+}
 .cta-row {
   display: flex;
   gap: 10px;
