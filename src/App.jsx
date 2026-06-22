@@ -28,8 +28,9 @@ const CARD_DATA = [
     id: 'now',
     label: 'Now',
     tiles: [
-      { kind: 'card', tint: 'green', label: 'Shipping', x: -9, y: 3, rot: -7 },
-      { kind: 'card', tint: 'amber', label: 'Building', x: 9, y: 5, rot: 8 },
+      { kind: 'card', tint: 'green', label: 'Shipping', x: -13, y: 7, rot: -10 },
+      { kind: 'face', src: '/genmoji.png', x: 0, y: -3, rot: 0 },
+      { kind: 'card', tint: 'amber', label: 'Building', x: 13, y: 7, rot: 10 },
     ],
   },
   {
@@ -193,8 +194,13 @@ function Card({ card, index, hovered, onHover, onOpen }) {
             className={'tile tile--' + tile.kind + (tile.tint ? ' tile--' + tile.tint : '')}
             style={tileStyle(tile, isHovered)}
           >
-            {tile.kind === 'shot' ? (
-              <img className="tile-shot" src={tile.src} alt="" loading="lazy" />
+            {tile.kind === 'shot' || tile.kind === 'face' ? (
+              <img
+                className={'tile-shot' + (tile.kind === 'face' ? ' tile-shot--face' : '')}
+                src={tile.src}
+                alt=""
+                loading="lazy"
+              />
             ) : (
               <>
                 <span className="tile-dot" />

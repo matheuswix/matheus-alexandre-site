@@ -404,6 +404,13 @@ a {
   object-position: top center;
   display: block;
 }
+.tile-shot--face {
+  object-position: center;
+}
+.tile--face {
+  background: #cfe0db;
+  border: 1px solid #bcd2cb;
+}
 .tile-dot {
   position: absolute;
   top: 6px;
