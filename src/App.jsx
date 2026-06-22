@@ -112,7 +112,7 @@ const FEATURED = [
 ]
 
 const SERVICES = [
-  { n: '01', title: 'MVP, built fast', desc: 'From scoping to a launched v1 — the fastest path to something real users can touch.' },
+  { n: '01', title: 'MVP, built fast', desc: 'From scoping to a launched v1 — the fastest path to something real users can touch, built on foundations that scale as you grow.' },
   { n: '02', title: 'Web & mobile apps', desc: 'Full-stack product engineering: frontend, backend, and the infrastructure underneath.' },
   { n: '03', title: 'Design that ships', desc: 'Interface and UX handled too — no waiting on a separate designer to move.' },
   { n: '04', title: 'Technical partner', desc: 'A founding-level engineer in the room: architecture calls, trade-offs, and momentum.' },
@@ -307,7 +307,7 @@ function ServicesModal() {
       <div className="section-index">02 / SERVICES</div>
       <h2>How I help founders</h2>
       <p className="modal-subtitle">
-        The technical half of your founding team — from first commit to launch.
+        The technical half of your founding team — from first commit to scale.
       </p>
       <div className="services-grid">
         {SERVICES.map((s) => (
