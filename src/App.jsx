@@ -314,7 +314,8 @@ function ServicesModal() {
         <span className="credentials-label">CREDENTIALS</span>
         <span className="spacer" />
         <span className="credentials-text">
-          Software Engineer at <strong>Wix</strong>, shipping product to teams worldwide.
+          Software Engineer at <strong>Wix</strong> (Tel Aviv) — shipping for teams across five
+          continents.
         </span>
       </div>
     </div>
@@ -332,7 +333,8 @@ function NowModal() {
       <p className="now-bio">
         I&#39;m a software engineer who likes building products with the people who dream them up.
         By day I ship at Wix; on the side I partner with founders to turn early ideas into real,
-        used software.
+        used software. I&#39;ve built for teams across Japan, New Zealand, California, France and
+        Brazil — at home across time zones and cultures.
       </p>
       {NOW_ITEMS.map((item) => (
         <div key={item.n} className="now-item">
