@@ -440,16 +440,19 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 34px 0 4px;
+  margin: 36px 0 0;
 }
-.featured-rule {
-  flex: 1;
-  height: 1px;
-  background: #efefef;
+.featured-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
 }
 .featured-entry {
-  padding: 26px 0;
-  border-top: 1px solid #efefef;
+  padding: 22px 22px 24px;
+  border: 1px solid #efefef;
+  border-radius: 16px;
+  background: #fff;
 }
 .featured-title-row {
   display: flex;

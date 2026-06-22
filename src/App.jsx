@@ -187,36 +187,37 @@ function WorkModal() {
 
       <div className="featured-head">
         <div className="section-index">FEATURED</div>
-        <div className="featured-rule" />
       </div>
 
-      {FEATURED.map((f) => (
-        <div key={f.title} className="featured-entry">
-          <div className="featured-title-row">
-            <span className="featured-title">{f.title}</span>
-            <span className="tag">{f.tag}</span>
-            <span className="spacer" />
-            <a className="featured-host" href={f.url} target="_blank" rel="noopener noreferrer">
-              {f.host} <span className="arrow">&#8599;</span>
-            </a>
-          </div>
-          <p className="featured-desc">{f.desc}</p>
-          {f.shots.some((s) => s.src) && (
-            <div className="shots">
-              {f.shots
-                .filter((shot) => shot.src)
-                .map((shot) => (
-                  <div
-                    key={shot.id}
-                    className={'shot' + (shot.portrait ? ' shot--portrait' : '')}
-                  >
-                    <img className="shot-img" src={shot.src} alt={shot.alt} loading="lazy" />
-                  </div>
-                ))}
+      <div className="featured-list">
+        {FEATURED.map((f) => (
+          <div key={f.title} className="featured-entry">
+            <div className="featured-title-row">
+              <span className="featured-title">{f.title}</span>
+              <span className="tag">{f.tag}</span>
+              <span className="spacer" />
+              <a className="featured-host" href={f.url} target="_blank" rel="noopener noreferrer">
+                {f.host} <span className="arrow">&#8599;</span>
+              </a>
             </div>
-          )}
-        </div>
-      ))}
+            <p className="featured-desc">{f.desc}</p>
+            {f.shots.some((s) => s.src) && (
+              <div className="shots">
+                {f.shots
+                  .filter((shot) => shot.src)
+                  .map((shot) => (
+                    <div
+                      key={shot.id}
+                      className={'shot' + (shot.portrait ? ' shot--portrait' : '')}
+                    >
+                      <img className="shot-img" src={shot.src} alt={shot.alt} loading="lazy" />
+                    </div>
+                  ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
