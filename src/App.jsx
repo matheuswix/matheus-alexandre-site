@@ -148,6 +148,7 @@ const LOGOS = [
   { name: 'NTT', src: '/logos/ntt-logo.svg' },
   { name: 'Banco do Brasil', src: '/logos/banco-do-brasil-v2.svg' },
   { name: 'Wix', src: '/logos/wix-logo.svg' },
+  { name: 'AB InBev', src: '/logos/ab-inbev.svg' },
   { name: 'Sherpa42', src: '/logos/sherpa.svg' },
   { name: 'Marisa', src: '/logos/marisa.svg' },
   { name: 'Cultura Inglesa', src: '/logos/cultura-inglesa.svg' },
