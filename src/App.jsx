@@ -134,8 +134,9 @@ const FUN_FACTS = [
 // Personal photos for the About gallery.
 const GALLERY = [
   { src: '/about/about-desk.jpg', alt: 'My desk — where the building happens' },
-  { src: '/about/about-gym.jpg', alt: 'Training at the gym' },
+  { src: '/about/about-running.jpg', alt: 'Out for a run' },
   { src: '/about/about-plane.jpg', alt: 'Coding on a flight' },
+  { src: '/about/about-cafe.jpg', alt: 'Off the clock in São Paulo' },
 ]
 
 // Client logos for the homepage proof strip. Replace the files in /public/logos
