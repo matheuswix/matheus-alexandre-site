@@ -125,7 +125,7 @@ const NOW_ITEMS = [
 ]
 
 const FUN_FACTS = [
-  { emoji: '🌅', title: 'Born in Natal, RN', sub: 'Now based in São Paulo.' },
+  { emoji: '🌎', title: 'Based in São Paulo, Brazil', sub: 'Building with founders across time zones.' },
   { emoji: '🏋️', title: 'CrossFit, gym & swim', sub: 'Training is non-negotiable.' },
   { emoji: '🏃', title: 'Out for a run most mornings', sub: 'Clears the head, fuels the focus.' },
   { emoji: '✈️', title: 'Always planning the next trip', sub: 'Travel keeps me curious.' },
