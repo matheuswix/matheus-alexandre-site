@@ -47,6 +47,7 @@ const PROJECTS = [
   { n: '01', name: 'educa.social', desc: 'A social platform for schools & educators', host: 'educa.social', url: 'https://educa.social/' },
   { n: '02', name: 'Sherpa42', desc: 'Digital agency — sites & product work', host: 'sherpa42.com.br', url: 'https://www.sherpa42.com.br/' },
   { n: '03', name: 'AB InBev — Product Locator', desc: 'A store-locator widget reused across their brand sites', host: 'gooseisland.com', url: 'https://www.gooseisland.com/find-beer' },
+  { n: '04', name: 'Banco do Brasil — MPE Week', desc: 'A bespoke marketplace built for Banco do Brasil', host: 'bb.com.br', url: 'https://www.bb.com.br/' },
 ]
 
 const FEATURED = [
@@ -82,6 +83,16 @@ const FEATURED = [
     shots: [
       { id: 'shot-locator-goose', src: '/shots/locator-goose.png', alt: 'Product locator on Goose Island — Find Beer', variant: 'tablet' },
       { id: 'shot-locator-ritas', src: '/shots/locator-ritas.png', alt: 'Product locator on RITAS — Find Your Ritas', variant: 'portrait' },
+    ],
+  },
+  {
+    title: 'Banco do Brasil — MPE Week',
+    tag: 'PRODUCT & SOFTWARE CONSULTING',
+    host: 'bb.com.br',
+    url: 'https://www.bb.com.br/',
+    desc: 'Specialized product and software consulting for Banco do Brasil — building MPE Week, a one-of-a-kind marketplace that brings micro and small businesses together in a single storefront.',
+    shots: [
+      { id: 'shot-bb-mpeweek', src: '/shots/bb-mpeweek.png', alt: 'Banco do Brasil — MPE Week marketplace homepage', variant: 'banner' },
     ],
   },
 ]

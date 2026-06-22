@@ -552,6 +552,12 @@ a {
   height: auto;
   aspect-ratio: 820 / 1094;
 }
+.shot--banner {
+  flex: 1 1 0;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1200 / 878;
+}
 /* A shot holding a real image drops the dashed placeholder styling */
 .shot:has(.shot-img) {
   border: 1px solid #e7e7e7;
