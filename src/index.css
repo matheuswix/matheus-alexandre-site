@@ -330,7 +330,7 @@ a {
 }
 
 .modal {
-  width: min(760px, 100%);
+  width: min(880px, 100%);
   max-height: calc(100% - 48px);
   overflow: auto;
   position: relative;
@@ -509,14 +509,12 @@ a {
   color: #6e6e6e;
   font-size: 14.5px;
   line-height: 1.65;
-  max-width: 52ch;
   text-wrap: pretty;
 }
 .shots {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   margin-top: 18px;
-  flex-wrap: wrap;
 }
 .shot {
   width: 240px;
@@ -534,10 +532,12 @@ a {
   color: #bdbdbd;
   overflow: hidden;
 }
-/* Portrait phone screenshots */
+/* Portrait phone screenshots — fill the row evenly, keeping the phone aspect. */
 .shot--portrait {
-  width: 150px;
-  height: 320px;
+  flex: 1 1 0;
+  width: auto;
+  height: auto;
+  aspect-ratio: 600 / 1300;
 }
 /* A shot holding a real image drops the dashed placeholder styling */
 .shot:has(.shot-img) {
