@@ -127,7 +127,7 @@ const NOW_ITEMS = [
 // with real brand assets (same paths) — monochrome treatment is applied in CSS.
 const LOGOS = [
   { name: 'NTT', src: '/logos/ntt-logo.svg' },
-  { name: 'Banco do Brasil', src: '/logos/banco-do-brasil-logo.svg' },
+  { name: 'Banco do Brasil', src: '/logos/banco-do-brasil-v2.svg' },
   { name: 'Wix', src: '/logos/wix-logo.svg' },
   { name: 'Marisa', src: '/logos/marisa.svg' },
   { name: 'Cultura Inglesa', src: '/logos/cultura-inglesa.svg' },
