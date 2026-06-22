@@ -46,7 +46,7 @@ const CARD_DATA = [
 const PROJECTS = [
   { n: '01', name: 'educa.social', desc: 'A social platform for schools & educators', host: 'educa.social', url: 'https://educa.social/' },
   { n: '02', name: 'Sherpa42', desc: 'Digital agency — sites & product work', host: 'sherpa42.com.br', url: 'https://www.sherpa42.com.br/' },
-  { n: '03', name: 'Goose Island — Find Beer', desc: 'Product locator app', host: 'gooseisland.com', url: 'https://www.gooseisland.com/find-beer' },
+  { n: '03', name: 'AB InBev — Product Locator', desc: 'A store-locator widget reused across their brand sites', host: 'gooseisland.com', url: 'https://www.gooseisland.com/find-beer' },
 ]
 
 const FEATURED = [
@@ -71,6 +71,17 @@ const FEATURED = [
     shots: [
       { id: 'shot-sherpa-desktop', src: '/shots/sherpa-desktop.png', alt: 'Sherpa42 — agency website, desktop view', variant: 'wide' },
       { id: 'shot-sherpa-mobile', src: '/shots/sherpa-mobile.png', alt: 'Sherpa42 — agency website, mobile view', variant: 'portrait' },
+    ],
+  },
+  {
+    title: 'AB InBev — Product Locator',
+    tag: 'PRODUCT ENGINEERING',
+    host: 'gooseisland.com',
+    url: 'https://www.gooseisland.com/find-beer',
+    desc: 'A store/product-locator widget I built for AB InBev and embedded across their brand sites — Goose Island, RITAS, and more. Shoppers pick a product, drop in a ZIP, and get nearby stores on a map. One widget, many brands, each themed to fit.',
+    shots: [
+      { id: 'shot-locator-goose', src: '/shots/locator-goose.png', alt: 'Product locator on Goose Island — Find Beer', variant: 'tablet' },
+      { id: 'shot-locator-ritas', src: '/shots/locator-ritas.png', alt: 'Product locator on RITAS — Find Your Ritas', variant: 'portrait' },
     ],
   },
 ]

@@ -546,6 +546,12 @@ a {
   height: auto;
   aspect-ratio: 1000 / 602;
 }
+.shot--tablet {
+  flex: 0.75 1 0;
+  width: auto;
+  height: auto;
+  aspect-ratio: 820 / 1094;
+}
 /* A shot holding a real image drops the dashed placeholder styling */
 .shot:has(.shot-img) {
   border: 1px solid #e7e7e7;
