@@ -26,7 +26,7 @@ const CARD_DATA = [
   },
   {
     id: 'now',
-    label: 'Now',
+    label: 'About',
     tiles: [
       { kind: 'card', tint: 'green', label: 'Shipping', x: -13, y: 7, rot: -11 },
       { kind: 'card', tint: 'amber', label: 'Building', x: 13, y: 7, rot: 11 },
@@ -316,7 +316,7 @@ function NowModal() {
     <div>
       <div className="now-eyebrow">
         <span className="now-dot" />
-        <div className="section-index">03 / NOW · UPDATED JUN 2026</div>
+        <div className="section-index">03 / ABOUT · UPDATED JUN 2026</div>
       </div>
       <h2>What I&#39;m up to</h2>
       <p className="now-bio">
