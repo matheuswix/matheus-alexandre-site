@@ -145,8 +145,8 @@ const CONTACTS = [
 // Per-tile transform, computed from the hovered flag (mirrors mkTile in the prototype).
 // Appearance (fill, image, label) is handled by classes — this is geometry only.
 function tileStyle(tile, hovered) {
-  const spread = hovered ? 1.8 : 1
-  const sc = hovered ? 1.06 : 1
+  const spread = hovered ? 2.3 : 1
+  const sc = hovered ? 1.08 : 1
   const x = tile.x * spread
   const y = tile.y + (hovered ? -9 : 0)
   const rot = tile.rot * (hovered ? 1.32 : 1)
