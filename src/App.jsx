@@ -132,11 +132,14 @@ const FUN_FACTS = [
 ]
 
 // Personal photos for the About gallery.
+// Scattered collage around the Fun-facts card (theoutline-style). Positions are
+// tuned for the desktop modal width; the layout stacks on mobile (see CSS).
 const GALLERY = [
-  { src: '/about/about-desk.jpg', alt: 'My desk — where the building happens' },
-  { src: '/about/about-running.jpg', alt: 'Out for a run' },
-  { src: '/about/about-plane.jpg', alt: 'Coding on a flight' },
-  { src: '/about/about-cafe.jpg', alt: 'Off the clock in São Paulo' },
+  { src: '/about/about-desk.jpg', alt: 'My desk — where the building happens', pos: { top: '6px', left: '34px' }, w: 168, rot: -6 },
+  { src: '/about/about-running.jpg', alt: 'Out for a run', pos: { bottom: '4px', left: '6px' }, w: 156, rot: 4 },
+  { src: '/about/about-gym.jpg', alt: 'Training at the gym', pos: { bottom: '-16px', left: '286px' }, w: 150, rot: 3 },
+  { src: '/about/about-plane.jpg', alt: 'Coding on a flight', pos: { top: '-4px', right: '36px' }, w: 160, rot: 6 },
+  { src: '/about/about-cafe.jpg', alt: 'Off the clock in São Paulo', pos: { bottom: '8px', right: '8px' }, w: 166, rot: -5 },
 ]
 
 // Client logos for the homepage proof strip. Replace the files in /public/logos
@@ -356,26 +359,29 @@ function NowModal() {
           training is the same one I bring to the work.
         </p>
 
-        {GALLERY.length > 0 && (
-          <div className="gallery">
-            {GALLERY.map((g) => (
-              <div key={g.src} className="gallery-item">
-                <img src={g.src} alt={g.alt} loading="lazy" />
+        <div className="about-collage">
+          {GALLERY.map((g) => (
+            <div
+              key={g.src}
+              className="collage-photo"
+              style={{ ...g.pos, width: g.w + 'px', transform: `rotate(${g.rot}deg)` }}
+            >
+              <img src={g.src} alt={g.alt} loading="lazy" />
+            </div>
+          ))}
+
+          <div className="fun-facts">
+            <div className="fun-facts-title">Fun facts</div>
+            {FUN_FACTS.map((f) => (
+              <div key={f.title} className="fun-fact">
+                <span className="fun-fact-emoji">{f.emoji}</span>
+                <span className="fun-fact-body">
+                  <span className="fun-fact-title">{f.title}</span>
+                  <span className="fun-fact-sub">{f.sub}</span>
+                </span>
               </div>
             ))}
           </div>
-        )}
-
-        <div className="fun-facts">
-          {FUN_FACTS.map((f) => (
-            <div key={f.title} className="fun-fact">
-              <span className="fun-fact-emoji">{f.emoji}</span>
-              <span className="fun-fact-body">
-                <span className="fun-fact-title">{f.title}</span>
-                <span className="fun-fact-sub">{f.sub}</span>
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </div>
