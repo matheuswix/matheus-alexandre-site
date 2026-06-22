@@ -321,22 +321,21 @@ a {
   position: absolute;
   inset: 0;
   z-index: 50;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 24px;
-  background: rgba(248, 248, 247, 0.78);
+  background: rgba(234, 234, 231, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
+/* No container box — sections float directly on the page backdrop. */
 .modal {
   width: min(760px, 100%);
-  max-height: calc(100% - 24px);
+  max-height: calc(100% - 48px);
   overflow: auto;
-  background: #eaeae7;
-  border-radius: 22px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16);
-  padding: 30px 34px;
+  background: transparent;
+  padding: 4px 2px;
   position: relative;
   opacity: 1;
   animation: popIn 0.42s cubic-bezier(0.2, 0.9, 0.25, 1) both;
