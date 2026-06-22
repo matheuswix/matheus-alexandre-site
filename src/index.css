@@ -329,16 +329,25 @@ a {
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* No container box — sections float directly on the page backdrop. */
 .modal {
   width: min(760px, 100%);
   max-height: calc(100% - 48px);
   overflow: auto;
-  background: transparent;
-  padding: 4px 2px;
   position: relative;
   opacity: 1;
   animation: popIn 0.42s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+}
+/* Work: no container — sections float directly on the page backdrop. */
+.modal--bare {
+  background: transparent;
+  padding: 4px 2px;
+}
+/* Other modals stay inside a white card. */
+.modal--boxed {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16);
+  padding: 30px 34px;
 }
 
 .close-btn {

@@ -185,11 +185,6 @@ function WorkModal() {
         ))}
       </div>
 
-      <div className="featured-head">
-        <div className="section-index">02 / PROJECTS</div>
-        <h2>Featured</h2>
-      </div>
-
       <div className="featured-list">
         {FEATURED.map((f) => (
           <div key={f.title} className="featured-entry">
@@ -411,8 +406,12 @@ export default function App() {
           }}
         >
           {ActiveModal && (
-            // key forces popIn to replay when switching between modals
-            <div className="modal" key={openCard}>
+            // key forces popIn to replay when switching between modals.
+            // Work floats as bare cards on the page; the rest sit in a white box.
+            <div
+              className={'modal ' + (openCard === 'work' ? 'modal--bare' : 'modal--boxed')}
+              key={openCard}
+            >
               <button className="close-btn" onClick={close} aria-label="Close">
                 &times;
               </button>
