@@ -1,0 +1,20 @@
+{
+  "name": "matheus-alexandre-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Personal/portfolio site for Matheus Alexandre — engineering partner for product-led founders.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
