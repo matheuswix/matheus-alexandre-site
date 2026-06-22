@@ -570,7 +570,7 @@ export default function App() {
         {/* Footer: CTAs + footnote */}
         <footer className="footer">
           <div className="logos">
-            <span className="logos-label">IN&nbsp;PRODUCTION&nbsp;AT</span>
+            <span className="logos-label">SHIPPED&nbsp;FOR</span>
             <div className="logos-marquee">
               <div className="logos-track">
                 {[0, 1].map((copy) => (
