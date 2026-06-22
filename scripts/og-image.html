@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; }
+      body {
+        background: #EAEAE7;
+        display: flex;
+        padding: 28px;
+        font-family: 'Geist', system-ui, sans-serif;
+      }
+      .panel {
+        flex: 1;
+        background: #fff;
+        border: 1px solid #E6E6E6;
+        border-radius: 40px;
+        padding: 64px 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .top { display: flex; align-items: center; gap: 18px; }
+      .monogram {
+        width: 64px; height: 64px;
+        border-radius: 18px;
+        background: #0E0E0E;
+        color: #fff;
+        font-weight: 600;
+        font-size: 22px;
+        letter-spacing: .5px;
+        display: flex; align-items: center; justify-content: center;
+        position: relative;
+      }
+      .monogram .dot {
+        position: absolute; top: -4px; right: -4px;
+        width: 16px; height: 16px; border-radius: 50%;
+        background: #EAB308; border: 3px solid #fff;
+      }
+      .eyebrow {
+        font-family: 'Geist Mono', monospace;
+        font-size: 16px; letter-spacing: 4px; color: #B0B0B0; font-weight: 500;
+      }
+      h1 {
+        font-size: 68px; font-weight: 600; line-height: 1.08;
+        letter-spacing: -2px; max-width: 940px;
+      }
+      h1 .muted { color: #B6B6B6; }
+      .foot {
+        display: flex; justify-content: space-between; align-items: flex-end;
+        font-family: 'Geist Mono', monospace; font-size: 17px; color: #9A9A9A;
+      }
+      .foot .role { color: #2A2A2A; font-weight: 500; }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="top">
+        <div class="monogram">MA<span class="dot"></span></div>
+        <div class="eyebrow">MATHEUS&nbsp;&nbsp;ALEXANDRE</div>
+      </div>
+      <h1>The engineering partner<br /><span class="muted">product-led founders build with.</span></h1>
+      <div class="foot">
+        <span class="role">Software Engineer · Wix</span>
+        <span>matheus.cc</span>
+      </div>
+    </div>
+  </body>
+</html>

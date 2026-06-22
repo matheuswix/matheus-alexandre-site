@@ -85,7 +85,7 @@ const NOW_ITEMS = [
 ]
 
 const CONTACTS = [
-  { kind: 'EMAIL', handle: 'hello@matheusalexandre.com', url: 'mailto:hello@matheusalexandre.com', target: '_self' },
+  { kind: 'EMAIL', handle: 'hello@matheus.cc', url: 'mailto:hello@matheus.cc', target: '_self' },
   { kind: 'GITHUB', handle: '@matheuswix', url: 'https://github.com/matheuswix', target: '_blank' },
   { kind: 'INSTAGRAM', handle: '@soumatheusalexandre', url: 'https://instagram.com/soumatheusalexandre', target: '_blank' },
 ]
@@ -272,7 +272,12 @@ function ContactModal() {
       <p className="modal-subtitle">
         Got an idea or an early product? Tell me where you&#39;re stuck — the first call is free.
       </p>
-      <a className="book-call" href="mailto:hello@matheusalexandre.com">
+      <a
+        className="book-call"
+        href="https://cal.com/matheusalexandre/intro-call"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <span>
           <span className="book-call-title">Book a call</span>
           <span className="book-call-sub">A free 30-min chat about your idea.</span>
@@ -372,7 +377,7 @@ export default function App() {
         {/* Footer: CTAs + footnote */}
         <footer className="footer">
           <div className="cta-row">
-            <a className="btn btn-primary" href="mailto:hello@matheusalexandre.com">
+            <a className="btn btn-primary" href="mailto:hello@matheus.cc">
               Start a project
             </a>
             <a

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#EAEAE7"/>
+  <rect x="28" y="28" width="1144" height="574" rx="40" fill="#FFFFFF" stroke="#E6E6E6" stroke-width="1"/>
+
+  <!-- Monogram -->
+  <rect x="100" y="92" width="64" height="64" rx="18" fill="#0E0E0E"/>
+  <text x="132" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" letter-spacing="0.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">MA</text>
+  <circle cx="160" cy="88" r="8" fill="#EAB308" stroke="#FFFFFF" stroke-width="3"/>
+
+  <!-- Eyebrow -->
+  <text x="184" y="124" font-family="'Geist Mono', ui-monospace, monospace" font-size="16" letter-spacing="4" font-weight="500" fill="#B0B0B0" dominant-baseline="central">MATHEUS  ALEXANDRE</text>
+
+  <!-- Hero -->
+  <text x="100" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="66" font-weight="600" letter-spacing="-2" fill="#0E0E0E">The engineering partner</text>
+  <text x="100" y="398" font-family="system-ui, -apple-system, sans-serif" font-size="66" font-weight="600" letter-spacing="-2" fill="#B6B6B6">product-led founders build with.</text>
+
+  <!-- Footer -->
+  <text x="100" y="540" font-family="'Geist Mono', ui-monospace, monospace" font-size="17" font-weight="500" fill="#2A2A2A">Software Engineer · Wix</text>
+  <text x="1072" y="540" font-family="'Geist Mono', ui-monospace, monospace" font-size="17" fill="#9A9A9A" text-anchor="end">matheus.cc</text>
+</svg>
