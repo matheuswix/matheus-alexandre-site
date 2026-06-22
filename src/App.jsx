@@ -64,7 +64,7 @@ const FEATURED = [
   },
   {
     title: 'Sherpa42',
-    tag: 'PRODUCT & ENGINEERING',
+    tag: 'WEBSITE DEVELOPMENT',
     host: 'sherpa42.com.br',
     url: 'https://www.sherpa42.com.br/',
     desc: 'Digital agency delivering websites and product work for clients. Hands-on across design and build, shipping polished, performant sites on tight timelines.',
