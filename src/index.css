@@ -436,10 +436,7 @@ a {
 }
 
 .featured-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 36px 0 0;
+  margin: 40px 0 0;
 }
 .featured-list {
   display: flex;

@@ -186,7 +186,8 @@ function WorkModal() {
       </div>
 
       <div className="featured-head">
-        <div className="section-index">FEATURED</div>
+        <div className="section-index">02 / PROJECTS</div>
+        <h2>Featured</h2>
       </div>
 
       <div className="featured-list">
