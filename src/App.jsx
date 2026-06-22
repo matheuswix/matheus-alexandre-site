@@ -46,8 +46,8 @@ const CARD_DATA = [
 const PROJECTS = [
   { n: '01', name: 'educa.social', desc: 'AI that creates schools’ social media content', host: 'educa.social', url: 'https://educa.social/' },
   { n: '02', name: 'Sherpa42', desc: 'Digital agency — sites & product work', host: 'sherpa42.com.br', url: 'https://www.sherpa42.com.br/' },
-  { n: '03', name: 'AB InBev — Product Locator', desc: 'A store-locator widget reused across their brand sites', host: 'gooseisland.com', url: 'https://www.gooseisland.com/find-beer' },
-  { n: '04', name: 'Banco do Brasil — MPE Week', desc: 'A bespoke marketplace built for Banco do Brasil', host: 'bb.com.br', url: 'https://www.bb.com.br/' },
+  { n: '03', name: 'AB InBev — Product Locator', desc: 'A store-locator widget reused across their brand sites', host: 'gooseisland.com', url: null },
+  { n: '04', name: 'Banco do Brasil — MPE Week', desc: 'A bespoke marketplace built for Banco do Brasil', host: 'bb.com.br', url: null },
   { n: '05', name: 'NTT — My Town Page', desc: 'A local-business growth platform for NTT', host: 'mytownpage.jp', url: 'https://www.mytownpage.jp' },
 ]
 
@@ -79,7 +79,7 @@ const FEATURED = [
     title: 'AB InBev — Product Locator',
     tag: 'PRODUCT ENGINEERING',
     host: 'gooseisland.com',
-    url: 'https://www.gooseisland.com/find-beer',
+    url: null,
     desc: 'A store/product-locator widget I built for AB InBev and embedded across their brand sites — Goose Island, RITAS, and more. Shoppers pick a product, drop in a ZIP, and get nearby stores on a map. One widget, many brands, each themed to fit.',
     shots: [
       { id: 'shot-locator-goose', src: '/shots/locator-goose.png', alt: 'Product locator on Goose Island — Find Beer', variant: 'tablet' },
@@ -90,7 +90,7 @@ const FEATURED = [
     title: 'Banco do Brasil — MPE Week',
     tag: 'PRODUCT & SOFTWARE CONSULTING',
     host: 'bb.com.br',
-    url: 'https://www.bb.com.br/',
+    url: null,
     desc: 'Specialized product and software consulting for Banco do Brasil — building MPE Week, a one-of-a-kind marketplace that brings micro and small businesses together in a single storefront.',
     shots: [
       { id: 'shot-bb-mpeweek', src: '/shots/bb-mpeweek.png', alt: 'Banco do Brasil — MPE Week marketplace homepage', variant: 'banner' },
@@ -223,17 +223,27 @@ function WorkModal() {
         <p className="modal-subtitle">Products taken from idea to live — design, build, and launch.</p>
 
         <div className="project-list">
-          {PROJECTS.map((p) => (
-            <a key={p.n} className="project-row" href={p.url} target="_blank" rel="noopener noreferrer">
-              <span className="row-index">{p.n}</span>
-              <span className="project-main">
-                <span className="project-name">{p.name}</span>
-                <span className="project-desc">{p.desc}</span>
-              </span>
-              <span className="project-host">{p.host}</span>
-              <span className="row-arrow">&#8599;</span>
-            </a>
-          ))}
+          {PROJECTS.map((p) => {
+            const Tag = p.url ? 'a' : 'div'
+            const linkProps = p.url
+              ? { href: p.url, target: '_blank', rel: 'noopener noreferrer' }
+              : {}
+            return (
+              <Tag
+                key={p.n}
+                className={'project-row' + (p.url ? '' : ' project-row--static')}
+                {...linkProps}
+              >
+                <span className="row-index">{p.n}</span>
+                <span className="project-main">
+                  <span className="project-name">{p.name}</span>
+                  <span className="project-desc">{p.desc}</span>
+                </span>
+                {p.url && <span className="project-host">{p.host}</span>}
+                {p.url && <span className="row-arrow">&#8599;</span>}
+              </Tag>
+            )
+          })}
         </div>
       </div>
 
@@ -244,9 +254,11 @@ function WorkModal() {
               <span className="featured-title">{f.title}</span>
               <span className="tag">{f.tag}</span>
               <span className="spacer" />
-              <a className="featured-host" href={f.url} target="_blank" rel="noopener noreferrer">
-                {f.host} <span className="arrow">&#8599;</span>
-              </a>
+              {f.url && (
+                <a className="featured-host" href={f.url} target="_blank" rel="noopener noreferrer">
+                  {f.host} <span className="arrow">&#8599;</span>
+                </a>
+              )}
             </div>
             <p className="featured-desc">{f.desc}</p>
             {f.shots.some((s) => s.src) && (

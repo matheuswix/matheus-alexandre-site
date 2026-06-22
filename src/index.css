@@ -476,6 +476,12 @@ a {
 .project-row:hover {
   background: #f0f0ee;
 }
+.project-row--static {
+  cursor: default;
+}
+.project-row--static:hover {
+  background: #f6f6f4;
+}
 .row-index {
   font-family: 'Geist Mono', monospace;
   font-size: 12px;
