@@ -92,6 +92,8 @@ a {
   display: flex;
   justify-content: center;
   padding-top: 6px;
+  position: relative;
+  z-index: 3;
 }
 
 .monogram {
@@ -140,6 +142,131 @@ a {
   justify-content: center;
   gap: 38px;
   padding: 28px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Peripheral hover previews ---------- */
+.previews-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+.preview-item {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(16px) scale(0.92) rotate(var(--rot, 0deg));
+  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.2, 0.9, 0.25, 1);
+  will-change: transform, opacity;
+}
+.preview-set.is-active .preview-item {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(var(--rot, 0deg));
+}
+.pos-tl {
+  top: 7%;
+  left: 3.5%;
+}
+.pos-tr {
+  top: 10%;
+  right: 3.5%;
+}
+.pos-bl {
+  bottom: 14%;
+  left: 3.5%;
+}
+.pos-br {
+  bottom: 11%;
+  right: 4%;
+}
+.preview-shot {
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+}
+.preview-shot--wide {
+  width: 300px;
+}
+.preview-shot--phone {
+  width: 116px;
+}
+.preview-shot--tablet {
+  width: 168px;
+}
+.preview-card {
+  width: 210px;
+  background: #fff;
+  border: 1px solid #eeeeec;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+}
+.preview-card-index {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  color: #c2c2c2;
+  margin-bottom: 8px;
+}
+.preview-card-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #0e0e0e;
+}
+.preview-card--now {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.preview-card--now .now-dot {
+  margin-top: 5px;
+  flex: none;
+}
+.preview-card-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+.preview-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #fff;
+  border: 1px solid #eeeeec;
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+}
+.preview-pill--dark {
+  background: #0e0e0e;
+  border-color: #0e0e0e;
+}
+.preview-pill-kind {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #b0b0b0;
+}
+.preview-pill-handle {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0e0e0e;
+}
+.preview-pill--dark .preview-pill-handle {
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .previews-layer {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preview-item {
+    transition: opacity 0.3s ease;
+    transform: rotate(var(--rot, 0deg));
+  }
 }
 
 .hero-wrap {
@@ -284,6 +411,8 @@ a {
   align-items: center;
   gap: 16px;
   padding-bottom: 12px;
+  position: relative;
+  z-index: 2;
 }
 .logos {
   display: flex;

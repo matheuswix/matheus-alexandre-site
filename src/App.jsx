@@ -374,6 +374,83 @@ const MODALS = {
   contact: ContactModal,
 }
 
+// ---- Peripheral hover previews ----
+// On hovering a card, contextual content floats into the corners around the hero.
+const POS4 = ['tl', 'tr', 'bl', 'br']
+const ROT4 = [-5, 5, 4, -5]
+
+// Work shows real project screenshots; the rest reuse the modal content.
+const WORK_SHOTS = [
+  { src: '/shots/mytown-desktop.png', pos: 'tl', size: 'wide', rot: -5 },
+  { src: '/shots/educa-1.png', pos: 'tr', size: 'phone', rot: 6 },
+  { src: '/shots/sherpa-desktop.png', pos: 'bl', size: 'wide', rot: 5 },
+  { src: '/shots/locator-goose.png', pos: 'br', size: 'tablet', rot: -6 },
+]
+
+function PreviewItem({ pos, rot, delay, children }) {
+  return (
+    <div
+      className={'preview-item pos-' + pos}
+      style={{ '--rot': rot + 'deg', transitionDelay: delay + 'ms' }}
+    >
+      {children}
+    </div>
+  )
+}
+
+function PreviewLayer({ hovered }) {
+  return (
+    <div className="previews-layer" aria-hidden="true">
+      <div className={'preview-set' + (hovered === 'work' ? ' is-active' : '')}>
+        {WORK_SHOTS.map((s, i) => (
+          <PreviewItem key={i} pos={s.pos} rot={s.rot} delay={i * 60}>
+            <img className={'preview-shot preview-shot--' + s.size} src={s.src} alt="" loading="lazy" />
+          </PreviewItem>
+        ))}
+      </div>
+
+      <div className={'preview-set' + (hovered === 'experience' ? ' is-active' : '')}>
+        {SERVICES.map((s, i) => (
+          <PreviewItem key={s.n} pos={POS4[i]} rot={ROT4[i]} delay={i * 60}>
+            <div className="preview-card">
+              <div className="preview-card-index">{s.n}</div>
+              <div className="preview-card-title">{s.title}</div>
+            </div>
+          </PreviewItem>
+        ))}
+      </div>
+
+      <div className={'preview-set' + (hovered === 'now' ? ' is-active' : '')}>
+        {NOW_ITEMS.map((it, i) => (
+          <PreviewItem key={it.n} pos={['tl', 'tr', 'br'][i]} rot={ROT4[i]} delay={i * 60}>
+            <div className="preview-card preview-card--now">
+              <span className="now-dot" />
+              <span className="preview-card-text">{it.text}</span>
+            </div>
+          </PreviewItem>
+        ))}
+      </div>
+
+      <div className={'preview-set' + (hovered === 'contact' ? ' is-active' : '')}>
+        {CONTACTS.map((c, i) => (
+          <PreviewItem key={c.kind} pos={POS4[i]} rot={ROT4[i]} delay={i * 60}>
+            <div className="preview-pill">
+              <span className="preview-pill-kind">{c.kind}</span>
+              <span className="preview-pill-handle">{c.handle}</span>
+            </div>
+          </PreviewItem>
+        ))}
+        <PreviewItem pos="br" rot={ROT4[3]} delay={180}>
+          <div className="preview-pill preview-pill--dark">
+            <span className="preview-pill-kind">BOOK A CALL</span>
+            <span className="preview-pill-handle">Free 30-min chat</span>
+          </div>
+        </PreviewItem>
+      </div>
+    </div>
+  )
+}
+
 export default function App() {
   const [hovered, setHovered] = useState(null)
   const [openCard, setOpenCard] = useState(null)
@@ -410,6 +487,9 @@ export default function App() {
             <span className="monogram-dot" style={{ background: ACCENT }} />
           </div>
         </header>
+
+        {/* Peripheral previews that float in on card hover (hidden while a modal is open) */}
+        <PreviewLayer hovered={openCard ? null : hovered} />
 
         {/* Main: eyebrow + hero + cards. Grid dims while a modal is open. */}
         <main className="main">
