@@ -11,34 +11,34 @@ const CARD_DATA = [
     id: 'work',
     label: 'Work',
     tiles: [
-      { label: 'educa', x: -16, y: 8, rot: -11 },
-      { label: 'sherpa', x: 0, y: -2, rot: 1, accent: true },
-      { label: 'goose', x: 16, y: 7, rot: 10 },
+      { kind: 'shot', src: '/shots/sherpa-mobile.png', x: -16, y: 8, rot: -11 },
+      { kind: 'shot', src: '/shots/educa-1.png', x: 0, y: -2, rot: 1 },
+      { kind: 'shot', src: '/shots/locator-ritas.png', x: 16, y: 7, rot: 10 },
     ],
   },
   {
     id: 'experience',
     label: 'How I help',
     tiles: [
-      { label: 'wix', x: -11, y: 5, rot: -8, accent: true },
-      { label: 'mvp', x: 11, y: 4, rot: 9 },
+      { kind: 'card', tint: 'peach', label: 'Design', x: -11, y: 5, rot: -8 },
+      { kind: 'card', tint: 'purple', label: 'Mobile Apps', x: 11, y: 4, rot: 9 },
     ],
   },
   {
     id: 'now',
     label: 'Now',
     tiles: [
-      { label: 'ship', x: -9, y: 3, rot: -7 },
-      { label: 'build', x: 9, y: 5, rot: 8 },
+      { kind: 'card', tint: 'green', label: 'Shipping', x: -9, y: 3, rot: -7 },
+      { kind: 'card', tint: 'amber', label: 'Building', x: 9, y: 5, rot: 8 },
     ],
   },
   {
     id: 'contact',
     label: 'Contact',
     tiles: [
-      { label: 'gh', x: -14, y: 6, rot: -10 },
-      { label: '@', x: 0, y: -3, rot: 0, accent: true },
-      { label: 'mail', x: 14, y: 6, rot: 10 },
+      { kind: 'card', tint: 'blue', label: 'gh', x: -14, y: 6, rot: -10 },
+      { kind: 'card', tint: 'dark', label: '@', x: 0, y: -3, rot: 0 },
+      { kind: 'card', tint: 'peach', label: 'mail', x: 14, y: 6, rot: 10 },
     ],
   },
 ]
@@ -142,6 +142,7 @@ const CONTACTS = [
 ]
 
 // Per-tile transform, computed from the hovered flag (mirrors mkTile in the prototype).
+// Appearance (fill, image, label) is handled by classes — this is geometry only.
 function tileStyle(tile, hovered) {
   const spread = hovered ? 1.8 : 1
   const sc = hovered ? 1.06 : 1
@@ -149,23 +150,9 @@ function tileStyle(tile, hovered) {
   const y = tile.y + (hovered ? -9 : 0)
   const rot = tile.rot * (hovered ? 1.32 : 1)
   return {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    width: '52px',
-    height: '66px',
-    borderRadius: '10px',
-    background: tile.accent
-      ? 'repeating-linear-gradient(125deg,#F4E6AE 0 5px,#FBF4D8 5px 11px)'
-      : 'repeating-linear-gradient(125deg,#ECECEC 0 5px,#F7F7F7 5px 11px)',
-    border: '1px solid ' + (tile.accent ? '#EBD98A' : '#E7E7E7'),
-    boxShadow: hovered ? '0 14px 26px rgba(0,0,0,.12)' : '0 4px 10px rgba(0,0,0,.05)',
     transform: `translate(-50%,-50%) translate(${x}px,${y}px) rotate(${rot}deg) scale(${sc})`,
-    transition: 'transform .5s cubic-bezier(.2,.9,.25,1), box-shadow .4s ease',
+    boxShadow: hovered ? '0 14px 26px rgba(0,0,0,.14)' : '0 5px 12px rgba(0,0,0,.07)',
     zIndex: hovered ? 5 : 1,
-    display: 'flex',
-    alignItems: 'flex-end',
-    justifyContent: 'center',
   }
 }
 
@@ -201,8 +188,19 @@ function Card({ card, index, hovered, onHover, onOpen }) {
         style={{ animationDelay: (0.06 * index + 0.05).toFixed(2) + 's' }}
       >
         {card.tiles.map((tile, ti) => (
-          <div key={ti} style={tileStyle(tile, isHovered)}>
-            <span className="tile-label">{tile.label}</span>
+          <div
+            key={ti}
+            className={'tile tile--' + tile.kind + (tile.tint ? ' tile--' + tile.tint : '')}
+            style={tileStyle(tile, isHovered)}
+          >
+            {tile.kind === 'shot' ? (
+              <img className="tile-shot" src={tile.src} alt="" loading="lazy" />
+            ) : (
+              <>
+                <span className="tile-dot" />
+                <span className="tile-text">{tile.label}</span>
+              </>
+            )}
           </div>
         ))}
       </div>

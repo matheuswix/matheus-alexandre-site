@@ -380,12 +380,78 @@ a {
   animation: bob 5.5s ease-in-out infinite;
 }
 
-.tile-label {
-  font-family: 'Geist Mono', monospace;
-  font-size: 7.5px;
-  letter-spacing: 0.3px;
-  color: #9a9a9a;
-  padding-bottom: 5px;
+.tile {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 52px;
+  height: 66px;
+  border-radius: 11px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.25, 1), box-shadow 0.4s ease;
+}
+.tile--shot {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+}
+.tile-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.tile-dot {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.45;
+}
+.tile-text {
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: 8.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  padding: 4px 5px;
+}
+/* tints — soft pastel app cards */
+.tile--peach {
+  background: #ffe3c2;
+  border: 1px solid #f6d2a6;
+  color: #8a5a1f;
+}
+.tile--purple {
+  background: #e7e1ff;
+  border: 1px solid #d4caff;
+  color: #5b4ba8;
+}
+.tile--green {
+  background: #d6f2dd;
+  border: 1px solid #bfe6c9;
+  color: #2f7d49;
+}
+.tile--amber {
+  background: #fbf0c8;
+  border: 1px solid #f0e1a0;
+  color: #8a7320;
+}
+.tile--blue {
+  background: #d8e6ff;
+  border: 1px solid #c2d6fb;
+  color: #3a5fab;
+}
+.tile--dark {
+  background: #0e0e0e;
+  border: 1px solid #0e0e0e;
+  color: #fff;
 }
 
 .card-label {
