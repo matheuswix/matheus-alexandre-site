@@ -131,8 +131,12 @@ const FUN_FACTS = [
   { emoji: '✈️', title: 'Always planning the next trip', sub: 'Travel keeps me curious.' },
 ]
 
-// Personal photos for the About gallery — add entries once the files are in /public/about.
-const GALLERY = []
+// Personal photos for the About gallery.
+const GALLERY = [
+  { src: '/about/about-desk.jpg', alt: 'My desk — where the building happens' },
+  { src: '/about/about-gym.jpg', alt: 'Training at the gym' },
+  { src: '/about/about-plane.jpg', alt: 'Coding on a flight' },
+]
 
 // Client logos for the homepage proof strip. Replace the files in /public/logos
 // with real brand assets (same paths) — monochrome treatment is applied in CSS.
@@ -347,8 +351,8 @@ function NowModal() {
         <div className="section-index">OFF THE CLOCK</div>
         <p className="now-bio">
           When I&#39;m not shipping, you&#39;ll find me training — CrossFit, swimming, or out for a
-          run. Born in Natal, now based in São Paulo, always planning the next trip. The
-          consistency I bring to training is the same one I bring to the work.
+          run. Based in São Paulo and always planning the next trip. The consistency I bring to
+          training is the same one I bring to the work.
         </p>
 
         {GALLERY.length > 0 && (

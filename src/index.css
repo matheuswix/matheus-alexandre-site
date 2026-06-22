@@ -956,7 +956,7 @@ a {
 .gallery-item {
   flex: 1 1 0;
   min-width: 120px;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   border-radius: 14px;
   overflow: hidden;
   background: #f6f6f4;
