@@ -752,12 +752,28 @@ export default function App() {
               key={openCard}
             >
               <button className="close-btn" onClick={close} aria-label="Close">
-                &times;
+                <span className="close-text">Close</span>
+                <span className="close-x">&times;</span>
               </button>
               <ActiveModal t={t} />
             </div>
           )}
         </div>
+      </div>
+
+      {/* Mobile-only sticky action bar */}
+      <div className="mobile-bar">
+        <a className="btn btn-primary" href="mailto:hello@matheus.cc">
+          Email
+        </a>
+        <a
+          className="btn btn-secondary"
+          href="https://cal.com/matheusalexandre/intro-call"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t.contact.bookTitle}
+        </a>
       </div>
     </div>
   )

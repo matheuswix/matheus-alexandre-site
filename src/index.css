@@ -1161,3 +1161,106 @@ a {
   font-size: 16px;
   color: #0e0e0e;
 }
+
+/* ---------- Mobile experience ---------- */
+.mobile-bar {
+  display: none;
+}
+.close-text {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  /* Cards: full-width, single column */
+  .cards {
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+  }
+  .card,
+  .card:hover {
+    width: 100%;
+  }
+  .card {
+    min-height: 152px;
+  }
+
+  /* Services: one column on mobile for readability */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide desktop CTA pills — the sticky bar replaces them; keep logos + footnote */
+  .cta-row {
+    display: none;
+  }
+  .footer {
+    padding-bottom: 90px;
+  }
+
+  /* Sticky mobile action bar */
+  .mobile-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    gap: 10px;
+    justify-content: center;
+    padding: 14px 16px calc(16px + env(safe-area-inset-bottom));
+    background: linear-gradient(to top, #ffffff 58%, rgba(255, 255, 255, 0));
+    pointer-events: none;
+  }
+  .mobile-bar .btn {
+    pointer-events: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Full-screen modals (cover the whole viewport) */
+  .overlay {
+    position: fixed;
+    padding: 0;
+    align-items: stretch;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+  .modal--boxed {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 66px 18px 104px;
+  }
+  .modal--bare {
+    padding: 62px 14px 104px;
+  }
+
+  /* Close becomes a labelled pill, fixed at the top-right */
+  .close-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 60;
+    width: auto;
+    height: auto;
+    border-radius: 999px;
+    padding: 9px 15px;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0e0e0e;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  .close-btn:hover {
+    transform: none;
+  }
+  .close-text {
+    display: inline;
+  }
+  .close-x {
+    font-size: 16px;
+  }
+}
