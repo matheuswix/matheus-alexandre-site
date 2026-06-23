@@ -53,7 +53,7 @@ const I18N = {
       title: 'What I’m up to',
       bio: 'I’m a software engineer who likes building products with the people who dream them up. By day I ship at Wix; on the side I partner with founders to turn early ideas into real, used software. I’ve built for teams across Japan, New Zealand, California, France and Brazil, at home across time zones and cultures.',
       offLabel: 'OFF THE CLOCK',
-      offBio: 'When I’m not shipping, you’ll find me training, whether it’s CrossFit, swimming, or a run. Based in São Paulo and always planning the next trip. The consistency I bring to training is the same one I bring to the work.',
+      offBio: 'When I’m not shipping, you’ll catch me training at the gym, pool, or park. Based in São Paulo and always planning the next trip, the consistency I bring to training is the same one I bring to the work.',
       funTitle: 'Fun facts',
     },
     nowItems: [
@@ -122,7 +122,7 @@ const I18N = {
       title: 'No que estou agora',
       bio: 'Sou um engenheiro de software que gosta de construir produtos com quem os sonha. De dia entrego na Wix; nas horas vagas faço parceria com founders para transformar ideias em software real e usado. Já construí para times no Japão, Nova Zelândia, Califórnia, França e Brasil, à vontade entre fusos e culturas.',
       offLabel: 'FORA DO EXPEDIENTE',
-      offBio: 'Quando não estou codando, me acha treinando, seja CrossFit, natação ou corrida. Baseado em São Paulo e sempre planejando a próxima viagem. A consistência que levo para o treino é a mesma que levo para o trabalho.',
+      offBio: 'Quando não estou codando, você me verá treinando na academia, piscina ou parque. Baseado em São Paulo e sempre planejando a próxima viagem, a consistência que levo para o treino é a mesma que levo para o trabalho.',
       funTitle: 'Curiosidades',
     },
     nowItems: [
