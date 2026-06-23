@@ -13,7 +13,7 @@ const CARD_DATA = [
     tiles: [
       { kind: 'logo', tint: 'blue', src: '/logos/ntt-logo.svg', x: -16, y: 8, rot: -11 },
       { kind: 'logo', tint: 'amber', src: '/logos/ab-inbev.svg', x: 0, y: -2, rot: 1 },
-      { kind: 'logo', tint: 'green', src: '/logos/banco-do-brasil-v2.svg', x: 16, y: 7, rot: 10 },
+      { kind: 'logo', tint: 'green', src: '/logos/bb-card.svg', x: 16, y: 7, rot: 10 },
     ],
   },
   {
