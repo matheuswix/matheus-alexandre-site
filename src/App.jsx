@@ -108,7 +108,7 @@ const I18N = {
       title: 'Como ajudo founders',
       subtitle: 'A metade técnica do seu time fundador, do primeiro commit ao scale.',
       credLabel: 'CREDENCIAIS',
-      credBefore: 'Engenheiro de Software na ',
+      credBefore: 'Engenheiro de Software no ',
       credAfter: ' (Tel Aviv), entregando para times em cinco continentes.',
     },
     serviceItems: [
@@ -119,15 +119,15 @@ const I18N = {
     ],
     about: {
       idx: '03 / SOBRE · ATUALIZADO JUN 2026',
-      title: 'No que estou agora',
-      bio: 'Sou um engenheiro de software que gosta de construir produtos com quem os sonha. De dia entrego na Wix; nas horas vagas faço parceria com founders para transformar ideias em software real e usado. Já construí para times no Japão, Nova Zelândia, Califórnia, França e Brasil, à vontade entre fusos e culturas.',
+      title: 'Onde estou agora',
+      bio: 'Sou um engenheiro de software que gosta de construir produtos com quem os sonha. De dia entrego no Wix; nas horas vagas faço parceria com founders para transformar ideias em software real e usado. Já construí para times no Japão, Nova Zelândia, Califórnia, França e Brasil, à vontade entre fusos e culturas.',
       offLabel: 'FORA DO EXPEDIENTE',
       offBio: 'Quando não estou codando, você me verá treinando na academia, piscina ou parque. Baseado em São Paulo e sempre planejando a próxima viagem, a consistência que levo para o treino é a mesma que levo para o trabalho.',
       funTitle: 'Curiosidades',
     },
     nowItems: [
       'Aberto a 1–2 novas parcerias com founders neste trimestre.',
-      'Entregando produto de ponta a ponta na Wix, afiado em escala.',
+      'Entregando produto de ponta a ponta no Wix, afiado em escala.',
       'Crescendo o educa.social e ajudando times no início a irem mais rápido.',
     ],
     funFacts: [
