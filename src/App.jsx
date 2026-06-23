@@ -14,7 +14,7 @@ const I18N = {
     ctaStart: 'Start a project',
     footnote: '*Currently taking on 1–2 founder partnerships.',
     logosLabel: 'SHIPPED FOR',
-    bookPill: { title: 'BOOK A CALL', sub: 'Free 30-min chat' },
+    bookPill: { title: 'BOOK A CALL', sub: 'Free 15-min chat' },
     work: {
       idx: '01 / WORK',
       title: 'Things I’ve shipped with founders',
@@ -72,7 +72,7 @@ const I18N = {
       title: 'Let’s build something',
       subtitle: 'Got an idea or an early product? Tell me where you’re stuck. The first call is free.',
       bookTitle: 'Book a call',
-      bookSub: 'A free 30-min chat about your idea.',
+      bookSub: 'A free 15-min chat about your idea.',
     },
   },
   pt: {
@@ -83,7 +83,7 @@ const I18N = {
     ctaStart: 'Começar um projeto',
     footnote: '*Aberto a 1–2 parcerias com founders no momento.',
     logosLabel: 'JÁ TRABALHEI COM',
-    bookPill: { title: 'AGENDAR CALL', sub: 'Papo de 30 min, grátis' },
+    bookPill: { title: 'AGENDAR CALL', sub: 'Papo de 15 min, grátis' },
     work: {
       idx: '01 / PROJETOS',
       title: 'O que já construí com founders',
@@ -141,7 +141,7 @@ const I18N = {
       title: 'Vamos construir algo',
       subtitle: 'Tem uma ideia ou um produto no início? Me conta onde travou. A primeira call é de graça.',
       bookTitle: 'Agendar uma call',
-      bookSub: 'Um papo gratuito de 30 min sobre sua ideia.',
+      bookSub: 'Um papo gratuito de 15 min sobre sua ideia.',
     },
   },
 }
