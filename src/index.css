@@ -1177,12 +1177,20 @@ a {
     max-width: 100%;
     gap: 12px;
   }
-  .card,
+  .card {
+    width: 100%;
+    min-height: 152px;
+  }
+  /* No hover behaviour on touch — cards stay static, tiles render expanded */
   .card:hover {
     width: 100%;
+    background: #f6f6f4;
+    box-shadow: none;
+    border-color: #eeeeec;
   }
-  .card {
-    min-height: 152px;
+  .cards:has(.card:hover) .card:not(:hover) {
+    filter: none;
+    opacity: 1;
   }
 
   /* Services: one column on mobile for readability */

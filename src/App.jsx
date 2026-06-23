@@ -282,8 +282,9 @@ function tileStyle(tile, hovered) {
   }
 }
 
-function Card({ card, index, hovered, onHover, onOpen, t }) {
-  const isHovered = hovered === card.id
+function Card({ card, index, hovered, onHover, onOpen, t, expanded }) {
+  // On touch/mobile there is no hover, so show the tiles in their expanded state by default.
+  const isHovered = expanded || hovered === card.id
 
   const handleMove = (e) => {
     const el = e.currentTarget
@@ -613,8 +614,19 @@ export default function App() {
   const [hovered, setHovered] = useState(null)
   const [openCard, setOpenCard] = useState(null)
   const [lang, setLang] = useState(getInitialLang)
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches
+  )
 
   const t = I18N[lang]
+
+  // Track mobile breakpoint so the cards can render expanded (no hover on touch).
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 640px)')
+    const onChange = (e) => setIsMobile(e.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
 
   // Esc closes any open modal (listener added on mount, removed on unmount).
   useEffect(() => {
@@ -699,6 +711,7 @@ export default function App() {
                     onHover={handleHover}
                     onOpen={setOpenCard}
                     t={t}
+                    expanded={isMobile}
                   />
                 ))}
               </div>
