@@ -76,7 +76,7 @@ const I18N = {
     },
   },
   pt: {
-    hero1: 'O parceiro de engenharia',
+    hero1: 'O engenheiro de software',
     hero2: 'com quem founders product-led constroem.',
     cards: { work: 'Projetos', experience: 'Como ajudo', now: 'Sobre', contact: 'Contato' },
     tiles: { design: 'Design', mobileApps: 'Apps', shipping: 'No ar', building: 'Construindo' },
