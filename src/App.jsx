@@ -43,7 +43,7 @@ const I18N = {
       credAfter: ' (Tel Aviv), shipping for teams across five continents.',
     },
     serviceItems: [
-      { title: 'MVP, built fast', desc: 'From scoping to a launched v1, the fastest path to something real users can touch, built on foundations that scale as you grow.' },
+      { title: 'MVP, built fast', desc: 'From scoping to a launched v1, the fastest path to something real users can touch. Building AI-native, I ship it faster, on foundations that scale as you grow.' },
       { title: 'Web & mobile apps', desc: 'Full-stack product engineering: frontend, backend, and the infrastructure underneath.' },
       { title: 'Design that ships', desc: 'Interface and UX handled too, no waiting on a separate designer to move.' },
       { title: 'Technical partner', desc: 'A founding-level engineer in the room: architecture calls, trade-offs, and momentum.' },
@@ -112,7 +112,7 @@ const I18N = {
       credAfter: ' (Tel Aviv), entregando para times em cinco continentes.',
     },
     serviceItems: [
-      { title: 'MVP, no ar rápido', desc: 'Do escopo a um v1 lançado, o caminho mais rápido para algo que usuários reais tocam, sobre fundações que escalam com você.' },
+      { title: 'MVP, no ar rápido', desc: 'Do escopo a um v1 lançado, o caminho mais rápido para algo que usuários reais tocam. Construindo de forma AI-native, entrego mais rápido, sobre fundações que escalam com você.' },
       { title: 'Apps web e mobile', desc: 'Engenharia de produto full-stack: frontend, backend e a infraestrutura por baixo.' },
       { title: 'Design que vai ao ar', desc: 'Interface e UX inclusos, sem esperar um designer separado para avançar.' },
       { title: 'Parceiro técnico', desc: 'Um engenheiro de nível fundador na sala: decisões de arquitetura, trade-offs e ritmo.' },
