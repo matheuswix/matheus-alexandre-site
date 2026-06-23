@@ -31,7 +31,7 @@ const I18N = {
       { tag: 'FOUNDING ENGINEER', desc: 'An AI marketing platform that helps schools create on-brand social media content in minutes, with no designer or agency. It learns each school’s brand, generates the artwork and captions, and schedules posts, stories, and reels across Instagram, Facebook, and WhatsApp. I led the product build end to end: architecture, the content-generation pipeline, and the interface, taking it from concept to a live product schools use today.' },
       { tag: 'SOFTWARE ENGINEER', desc: 'Software engineering on NTT’s My Town Page, a platform that helps local businesses build their web presence and grow, with business pages, traffic and lead analytics, and digital marketing tools.' },
       { tag: 'WEBSITE DEVELOPMENT', desc: 'Digital agency delivering websites and product work for clients. Hands-on across design and build, shipping polished, performant sites on tight timelines.' },
-      { tag: 'PRODUCT & SOFTWARE CONSULTING', desc: 'Specialized product and software consulting for Banco do Brasil, building MPE Week, a one-of-a-kind marketplace that brings micro and small businesses together in a single storefront.' },
+      { tag: 'PRODUCT & SOFTWARE CONSULTING', desc: 'Specialized product and software consulting for Banco do Brasil, a one-of-a-kind marketplace built for MPE Week that brings micro and small businesses together in a single storefront.' },
       { tag: 'PRODUCT ENGINEERING', desc: 'A store and product-locator widget I built for AB InBev and embedded across their brand sites, from Goose Island to RITAS. Shoppers pick a product, drop in a ZIP, and get nearby stores on a map. One widget, many brands, each themed to fit.' },
     ],
     services: {
@@ -100,7 +100,7 @@ const I18N = {
       { tag: 'ENGENHEIRO FUNDADOR', desc: 'Uma plataforma de marketing com IA que ajuda escolas a criar conteúdo de redes sociais com a cara da marca em minutos, sem designer ou agência. Ela aprende a identidade de cada escola, gera as artes e legendas, e agenda posts, stories e reels no Instagram, Facebook e WhatsApp. Liderei a construção do produto de ponta a ponta: arquitetura, o pipeline de geração de conteúdo e a interface, levando do conceito a um produto que escolas usam hoje.' },
       { tag: 'ENGENHEIRO DE SOFTWARE', desc: 'Engenharia de software no My Town Page da NTT, uma plataforma que ajuda pequenos negócios a construir sua presença online e crescer, com páginas de negócio, análise de tráfego e leads, e ferramentas de marketing digital.' },
       { tag: 'DESENVOLVIMENTO WEB', desc: 'Agência digital entregando sites e produto para clientes. Mão na massa em design e desenvolvimento, lançando sites polidos e performáticos em prazos curtos.' },
-      { tag: 'CONSULTORIA DE PRODUTO E SOFTWARE', desc: 'Consultoria especializada em produto e software para o Banco do Brasil, construindo o MPE Week, um marketplace único que reúne micro e pequenas empresas em uma só vitrine.' },
+      { tag: 'CONSULTORIA DE PRODUTO E SOFTWARE', desc: 'Consultoria especializada em produto e software para o Banco do Brasil, um marketplace único feito para a MPE Week que reúne micro e pequenas empresas em uma só vitrine.' },
       { tag: 'ENGENHARIA DE PRODUTO', desc: 'Um widget localizador de produtos e lojas que construí para a AB InBev e embarquei nos sites das marcas, de Goose Island a RITAS. O consumidor escolhe um produto, digita o CEP e vê as lojas próximas no mapa. Um widget, várias marcas, cada uma com seu tema.' },
     ],
     services: {
