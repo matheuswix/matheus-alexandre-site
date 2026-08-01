@@ -9,6 +9,7 @@ const I18N = {
   en: {
     hero1: 'The engineering partner',
     hero2: 'product-led founders build with.',
+    heroCred: 'Software Engineer at Wix · founder of Meu Ecommerce (2M+ operations/month)',
     cards: { work: 'Work', experience: 'How I help', now: 'About', contact: 'Contact' },
     tiles: { design: 'Design', mobileApps: 'Mobile Apps', shipping: 'Shipping', building: 'Building' },
     ctaStart: 'Start a project',
@@ -17,41 +18,71 @@ const I18N = {
     bookPill: { title: 'BOOK A CALL', sub: 'Free 15-min chat' },
     work: {
       idx: '01 / WORK',
-      title: 'Things I’ve shipped with founders',
-      subtitle: 'Products taken from idea to live. Design, build, and launch.',
+      title: 'Products I’ve built and shipped',
+      subtitle: 'Ventures I’ve founded, plus product work for teams who needed to move fast.',
+      venturesLabel: 'VENTURES I’VE FOUNDED',
+      clientLabel: 'SELECTED CLIENT WORK',
+      more: 'Details',
+      less: 'Hide',
     },
-    projectDescs: [
-      'AI that creates schools’ social media content',
-      'A local-business growth platform for NTT',
-      'Digital agency for sites and product work',
-      'A bespoke marketplace built for Banco do Brasil',
-      'A store-locator widget reused across their brand sites',
+    ventures: [
+      {
+        tag: 'FOUNDER · ENGINEERING',
+        desc: 'A suite of apps that power online stores in Brazil: shipping, tracking, installments, and Pix discounts, each one native to Wix and Shopify. As founder and head of engineering, I built the shared infrastructure the whole ecosystem runs on, and keep shipping new apps on top of it.',
+        stats: [
+          { v: '2M+', l: 'operations / month' },
+          { v: '8,500+', l: 'merchants served' },
+        ],
+      },
+      {
+        tag: 'FOUNDING ENGINEER',
+        desc: 'An AI marketing platform that helps schools create on-brand social media content in minutes, with no designer or agency. It learns each school’s brand, generates the artwork and captions, and schedules posts, stories, and reels across Instagram, Facebook, and WhatsApp. I led the product build end to end: architecture, the content-generation pipeline, and the interface, taking it from concept to a live product schools use today.',
+      },
     ],
-    featured: [
-      { tag: 'FOUNDING ENGINEER', desc: 'An AI marketing platform that helps schools create on-brand social media content in minutes, with no designer or agency. It learns each school’s brand, generates the artwork and captions, and schedules posts, stories, and reels across Instagram, Facebook, and WhatsApp. I led the product build end to end: architecture, the content-generation pipeline, and the interface, taking it from concept to a live product schools use today.' },
-      { tag: 'SOFTWARE ENGINEER', desc: 'Software engineering on NTT’s My Town Page, a platform that helps local businesses build their web presence and grow, with business pages, traffic and lead analytics, and digital marketing tools.' },
-      { tag: 'WEBSITE DEVELOPMENT', desc: 'Digital agency delivering websites and product work for clients. Hands-on across design and build, shipping polished, performant sites on tight timelines.' },
-      { tag: 'PRODUCT & SOFTWARE CONSULTING', desc: 'Specialized product and software consulting for Banco do Brasil, a one-of-a-kind marketplace built for MPE Week that brings micro and small businesses together in a single storefront.' },
-      { tag: 'PRODUCT ENGINEERING', desc: 'A store and product-locator widget I built for AB InBev and embedded across their brand sites, from Goose Island to RITAS. Shoppers pick a product, drop in a ZIP, and get nearby stores on a map. One widget, many brands, each themed to fit.' },
+    clientWork: [
+      {
+        tag: 'SOFTWARE ENGINEER',
+        desc: 'A local-business growth platform for NTT',
+        full: 'Software engineering on NTT’s My Town Page, a platform that helps local businesses build their web presence and grow, with business pages, traffic and lead analytics, and digital marketing tools.',
+      },
+      {
+        tag: 'PRODUCT ENGINEERING',
+        desc: 'A store-locator widget reused across their brand sites',
+        full: 'A store and product-locator widget I built for AB InBev and embedded across their brand sites, from Goose Island to RITAS. Shoppers pick a product, drop in a ZIP, and get nearby stores on a map. One widget, many brands, each themed to fit.',
+      },
+      {
+        tag: 'PRODUCT & SOFTWARE CONSULTING',
+        desc: 'A bespoke marketplace built for Banco do Brasil',
+        full: 'Specialized product and software consulting for Banco do Brasil, a one-of-a-kind marketplace built for MPE Week that brings micro and small businesses together in a single storefront.',
+      },
+      {
+        tag: 'WEBSITE DEVELOPMENT',
+        desc: 'Digital agency for sites and product work',
+        full: 'Digital agency delivering websites and product work for clients. Hands-on across design and build, shipping polished, performant sites on tight timelines.',
+      },
     ],
     services: {
       idx: '02 / SERVICES',
       title: 'How I help founders',
-      subtitle: 'The technical half of your founding team, from first commit to scale.',
+      positioning: 'Founders usually choose between a slow senior hire, an agency that doesn’t think in product, or a freelancer who can’t scale. I’m the other option: a founder who designs, builds, and ships your product like my own.',
+      forWho: 'For product-led founders, pre-seed to seed, who need a real v1 in weeks, not a team in months.',
+      howLabel: 'HOW WE WORK',
+      howText: 'No agency overhead, no rotating contractors, no long proposals. You talk to the person building it, and we start with a free 15-minute call.',
       credLabel: 'CREDENTIALS',
       credBefore: 'Software Engineer at ',
-      credAfter: ' (Tel Aviv), shipping for teams across five continents.',
+      credMid: ' (Tel Aviv) and founder of ',
+      credAfter: ' (2M+ operations/month). Shipping for teams across five continents.',
     },
     serviceItems: [
-      { title: 'MVP, built fast', desc: 'From scoping to a launched v1, the fastest path to something real users can touch. Building AI-native, I ship it faster, on foundations that scale as you grow.' },
-      { title: 'Web & mobile apps', desc: 'Full-stack product engineering: frontend, backend, and the infrastructure underneath.' },
-      { title: 'Design that ships', desc: 'Interface and UX handled too, no waiting on a separate designer to move.' },
-      { title: 'Technical partner', desc: 'A founding-level engineer in the room: architecture calls, trade-offs, and momentum.' },
+      { title: 'Idea to a live v1', desc: 'The fastest path to something real users can touch. AI-native, so it ships in weeks, on foundations that hold as you grow.' },
+      { title: 'One person, the whole product', desc: 'Design, frontend, backend, and the infrastructure underneath. No handoffs, no waiting on a separate designer, no coordination tax.' },
+      { title: 'Built to scale, not to redo', desc: 'The same production standards I ship at Wix. A v1 you grow on, not one you throw away.' },
+      { title: 'A partner, not a ticket-taker', desc: 'In your Slack and your architecture calls, making the trade-offs with you. One or two founders at a time.' },
     ],
     about: {
-      idx: '03 / ABOUT · UPDATED JUN 2026',
+      idx: '03 / ABOUT',
       title: 'What I’m up to',
-      bio: 'I’m a software engineer who likes building products with the people who dream them up. By day I ship at Wix; on the side I partner with founders to turn early ideas into real, used software. I’ve built for teams across Japan, New Zealand, California, France and Brazil, at home across time zones and cultures.',
+      bio: 'I’m a software engineer, and a founder. By day I ship at enterprise scale at Wix; I’ve also founded and grown my own products, like Meu Ecommerce, now handling over 2 million operations a month. So when I build with you, I make the calls like an owner, because I am one. I’ve shipped for teams across Japan, New Zealand, California, France and Brazil, at home across time zones and cultures.',
       offLabel: 'OFF THE CLOCK',
       offBio: 'When I’m not shipping, you’ll catch me training at the gym, pool, or park. Based in São Paulo and always planning the next trip, the consistency I bring to training is the same one I bring to the work.',
       funTitle: 'Fun facts',
@@ -59,7 +90,7 @@ const I18N = {
     nowItems: [
       'Open to 1–2 new founder partnerships this quarter.',
       'Shipping product end to end at Wix, staying sharp on scale.',
-      'Growing educa.social and helping early teams move faster.',
+      'Growing Meu Ecommerce and educa.social, and helping early teams move faster.',
     ],
     funFacts: [
       { title: 'Based in São Paulo, Brazil', sub: 'Building with founders across time zones.' },
@@ -78,6 +109,7 @@ const I18N = {
   pt: {
     hero1: 'O engenheiro de software',
     hero2: 'com quem founders constroem produtos.',
+    heroCred: 'Engenheiro no Wix · founder do Meu Ecommerce (2 mi+ operações/mês)',
     cards: { work: 'Projetos', experience: 'Como ajudo', now: 'Sobre', contact: 'Contato' },
     tiles: { design: 'Design', mobileApps: 'Apps', shipping: 'No ar', building: 'Construindo' },
     ctaStart: 'Começar um projeto',
@@ -86,41 +118,71 @@ const I18N = {
     bookPill: { title: 'AGENDAR CALL', sub: 'Papo de 15 min, grátis' },
     work: {
       idx: '01 / PROJETOS',
-      title: 'O que já construí com founders',
-      subtitle: 'Produtos levados da ideia ao ar. Design, desenvolvimento e lançamento.',
+      title: 'Produtos que construí e coloquei no ar',
+      subtitle: 'Negócios que eu fundei, mais trabalho de produto para times que precisavam ir rápido.',
+      venturesLabel: 'O QUE EU FUNDEI',
+      clientLabel: 'TRABALHO COM CLIENTES',
+      more: 'Detalhes',
+      less: 'Ocultar',
     },
-    projectDescs: [
-      'IA que cria o conteúdo de redes sociais de escolas',
-      'Plataforma de crescimento para pequenos negócios da NTT',
-      'Agência digital para sites e produto',
-      'Um marketplace sob medida para o Banco do Brasil',
-      'Widget localizador de lojas reutilizado nos sites das marcas',
+    ventures: [
+      {
+        tag: 'FUNDADOR · ENGENHARIA',
+        desc: 'Um conjunto de apps que movem lojas online no Brasil: frete, rastreio, parcelamento e desconto no Pix, cada um nativo no Wix e no Shopify. Como fundador e responsável pela engenharia, construí a infraestrutura compartilhada em que todo o ecossistema roda, e sigo lançando novos apps sobre ela.',
+        stats: [
+          { v: '2 mi+', l: 'operações / mês' },
+          { v: '8.500+', l: 'lojistas atendidos' },
+        ],
+      },
+      {
+        tag: 'ENGENHEIRO FUNDADOR',
+        desc: 'Uma plataforma de marketing com IA que ajuda escolas a criar conteúdo de redes sociais com a cara da marca em minutos, sem designer ou agência. Ela aprende a identidade de cada escola, gera as artes e legendas, e agenda posts, stories e reels no Instagram, Facebook e WhatsApp. Liderei a construção do produto de ponta a ponta: arquitetura, o pipeline de geração de conteúdo e a interface, levando do conceito a um produto que escolas usam hoje.',
+      },
     ],
-    featured: [
-      { tag: 'ENGENHEIRO FUNDADOR', desc: 'Uma plataforma de marketing com IA que ajuda escolas a criar conteúdo de redes sociais com a cara da marca em minutos, sem designer ou agência. Ela aprende a identidade de cada escola, gera as artes e legendas, e agenda posts, stories e reels no Instagram, Facebook e WhatsApp. Liderei a construção do produto de ponta a ponta: arquitetura, o pipeline de geração de conteúdo e a interface, levando do conceito a um produto que escolas usam hoje.' },
-      { tag: 'ENGENHEIRO DE SOFTWARE', desc: 'Engenharia de software no My Town Page da NTT, uma plataforma que ajuda pequenos negócios a construir sua presença online e crescer, com páginas de negócio, análise de tráfego e leads, e ferramentas de marketing digital.' },
-      { tag: 'DESENVOLVIMENTO WEB', desc: 'Agência digital entregando sites e produto para clientes. Mão na massa em design e desenvolvimento, lançando sites polidos e performáticos em prazos curtos.' },
-      { tag: 'CONSULTORIA DE PRODUTO E SOFTWARE', desc: 'Consultoria especializada em produto e software para o Banco do Brasil, um marketplace único feito para a MPE Week que reúne micro e pequenas empresas em uma só vitrine.' },
-      { tag: 'ENGENHARIA DE PRODUTO', desc: 'Um widget localizador de produtos e lojas que construí para a AB InBev e embarquei nos sites das marcas, de Goose Island a RITAS. O consumidor escolhe um produto, digita o CEP e vê as lojas próximas no mapa. Um widget, várias marcas, cada uma com seu tema.' },
+    clientWork: [
+      {
+        tag: 'ENGENHEIRO DE SOFTWARE',
+        desc: 'Plataforma de crescimento para pequenos negócios da NTT',
+        full: 'Engenharia de software no My Town Page da NTT, uma plataforma que ajuda pequenos negócios a construir sua presença online e crescer, com páginas de negócio, análise de tráfego e leads, e ferramentas de marketing digital.',
+      },
+      {
+        tag: 'ENGENHARIA DE PRODUTO',
+        desc: 'Widget localizador de lojas reutilizado nos sites das marcas',
+        full: 'Um widget localizador de produtos e lojas que construí para a AB InBev e embarquei nos sites das marcas, de Goose Island a RITAS. O consumidor escolhe um produto, digita o CEP e vê as lojas próximas no mapa. Um widget, várias marcas, cada uma com seu tema.',
+      },
+      {
+        tag: 'CONSULTORIA DE PRODUTO E SOFTWARE',
+        desc: 'Um marketplace sob medida para o Banco do Brasil',
+        full: 'Consultoria especializada em produto e software para o Banco do Brasil, um marketplace único feito para a MPE Week que reúne micro e pequenas empresas em uma só vitrine.',
+      },
+      {
+        tag: 'DESENVOLVIMENTO WEB',
+        desc: 'Agência digital para sites e produto',
+        full: 'Agência digital entregando sites e produto para clientes. Mão na massa em design e desenvolvimento, lançando sites polidos e performáticos em prazos curtos.',
+      },
     ],
     services: {
       idx: '02 / SERVIÇOS',
       title: 'Como ajudo founders',
-      subtitle: 'A metade técnica do seu time fundador, do primeiro commit ao scale.',
+      positioning: 'Founders costumam escolher entre uma contratação sênior lenta, uma agência que não pensa produto, ou um freelancer que não escala. Eu sou a outra opção: um founder que projeta, constrói e lança o seu produto como se fosse meu.',
+      forWho: 'Para founders product-led, do pre-seed ao seed, que precisam de um v1 real em semanas, não de um time em meses.',
+      howLabel: 'COMO FUNCIONA',
+      howText: 'Sem overhead de agência, sem contratados rotativos, sem proposta longa. Você fala com quem constrói, e a gente começa com uma call grátis de 15 minutos.',
       credLabel: 'CREDENCIAIS',
       credBefore: 'Engenheiro de Software no ',
-      credAfter: ' (Tel Aviv), entregando para times em cinco continentes.',
+      credMid: ' (Tel Aviv) e founder do ',
+      credAfter: ' (2 mi+ operações/mês). Entregando para times em cinco continentes.',
     },
     serviceItems: [
-      { title: 'MVP, no ar rápido', desc: 'Do escopo a um v1 lançado, o caminho mais rápido para algo que usuários reais tocam. Construindo de forma AI-native, entrego mais rápido, sobre fundações que escalam com você.' },
-      { title: 'Apps web e mobile', desc: 'Engenharia de produto full-stack: frontend, backend e a infraestrutura por baixo.' },
-      { title: 'Design que vai ao ar', desc: 'Interface e UX inclusos, sem esperar um designer separado para avançar.' },
-      { title: 'Parceiro técnico', desc: 'Um engenheiro de nível fundador na sala: decisões de arquitetura, trade-offs e ritmo.' },
+      { title: 'Da ideia ao v1 no ar', desc: 'O caminho mais rápido para algo que usuários reais tocam. AI-native, entrego em semanas, sobre fundações que aguentam o crescimento.' },
+      { title: 'Uma pessoa, o produto inteiro', desc: 'Design, frontend, backend e a infraestrutura por baixo. Sem handoff, sem esperar um designer, sem imposto de coordenação.' },
+      { title: 'Feito para escalar, não para refazer', desc: 'O mesmo padrão de produção que entrego no Wix. Um v1 que você cresce em cima, não um que joga fora.' },
+      { title: 'Um parceiro, não um executor de tickets', desc: 'No seu Slack e nas decisões de arquitetura, decidindo os trade-offs com você. Um ou dois founders por vez.' },
     ],
     about: {
-      idx: '03 / SOBRE · ATUALIZADO JUN 2026',
+      idx: '03 / SOBRE',
       title: 'Onde estou agora',
-      bio: 'Sou um engenheiro de software que gosta de construir produtos com quem os sonha. De dia entrego no Wix; nas horas vagas faço parceria com founders para transformar ideias em software real e usado. Já construí para times no Japão, Nova Zelândia, Califórnia, França e Brasil, à vontade entre fusos e culturas.',
+      bio: 'Sou engenheiro de software, e founder. De dia entrego em escala enterprise no Wix; também fundei e cresci meus próprios produtos, como o Meu Ecommerce, que hoje processa mais de 2 milhões de operações por mês. Então quando construo com você, decido como dono, porque sou um. Já construí para times no Japão, Nova Zelândia, Califórnia, França e Brasil, à vontade entre fusos e culturas.',
       offLabel: 'FORA DO EXPEDIENTE',
       offBio: 'Quando não estou codando, você me verá treinando na academia, piscina ou parque. Baseado em São Paulo e sempre planejando a próxima viagem, a consistência que levo para o treino é a mesma que levo para o trabalho.',
       funTitle: 'Curiosidades',
@@ -128,7 +190,7 @@ const I18N = {
     nowItems: [
       'Aberto a 1–2 novas parcerias com founders neste trimestre.',
       'Entregando produto de ponta a ponta no Wix, afiado em escala.',
-      'Crescendo o educa.social e ajudando times no início a irem mais rápido.',
+      'Crescendo o Meu Ecommerce e o educa.social, e ajudando times no início a irem mais rápido.',
     ],
     funFacts: [
       { title: 'Baseado em São Paulo, Brasil', sub: 'Construindo com founders em vários fusos.' },
@@ -182,16 +244,23 @@ const CARD_DATA = [
   },
 ]
 
-const PROJECTS = [
-  { n: '01', name: 'educa.social', host: 'educa.social', url: 'https://educa.social/' },
-  { n: '02', name: 'NTT — My Town Page', host: 'mytownpage.jp', url: 'https://www.mytownpage.jp' },
-  { n: '03', name: 'Sherpa42', host: 'sherpa42.com.br', url: 'https://www.sherpa42.com.br/' },
-  { n: '04', name: 'Banco do Brasil — MPE Week', host: 'bb.com.br', url: null },
-  { n: '05', name: 'AB InBev — Product Locator', host: 'gooseisland.com', url: null },
-]
-
-const FEATURED = [
+// Founder ventures — rich treatment (role, description, stats, screenshots).
+const VENTURES = [
   {
+    id: 'meuecom',
+    title: 'Meu Ecommerce',
+    host: 'meuecommerce.ia.br',
+    url: 'https://www.meuecommerce.ia.br',
+    shotsGrid: true,
+    shots: [
+      { id: 'shot-meuecom-frete', src: '/shots/meuecom-frete.png', variant: 'app' },
+      { id: 'shot-meuecom-rastreio', src: '/shots/meuecom-rastreio.png', variant: 'app' },
+      { id: 'shot-meuecom-parcelamento', src: '/shots/meuecom-parcelamento.png', variant: 'app' },
+      { id: 'shot-meuecom-pix', src: '/shots/meuecom-pix.png', variant: 'app' },
+    ],
+  },
+  {
+    id: 'educa',
     title: 'educa.social',
     host: 'educa.social',
     url: 'https://educa.social/',
@@ -201,10 +270,14 @@ const FEATURED = [
       { id: 'shot-educa-3', src: '/shots/educa-3.png', variant: 'portrait' },
     ],
   },
+]
+
+// Selected client work — branded cards that expand in place (no external links).
+const CLIENT_WORK = [
   {
-    title: 'NTT — My Town Page',
-    host: 'mytownpage.jp',
-    url: 'https://www.mytownpage.jp',
+    id: 'ntt',
+    name: 'NTT — My Town Page',
+    logo: '/logos/ntt-logo.svg',
     shots: [
       { id: 'shot-mytown-desktop', src: '/shots/mytown-desktop.png', variant: 'wide' },
       { id: 'shot-mytown-1', src: '/shots/mytown-mobile-1.png', variant: 'portrait' },
@@ -212,27 +285,27 @@ const FEATURED = [
     ],
   },
   {
-    title: 'Sherpa42',
-    host: 'sherpa42.com.br',
-    url: 'https://www.sherpa42.com.br/',
-    shots: [
-      { id: 'shot-sherpa-desktop', src: '/shots/sherpa-desktop.png', variant: 'wide' },
-      { id: 'shot-sherpa-mobile', src: '/shots/sherpa-mobile.png', variant: 'portrait' },
-    ],
-  },
-  {
-    title: 'Banco do Brasil — MPE Week',
-    host: 'bb.com.br',
-    url: null,
-    shots: [{ id: 'shot-bb-mpeweek', src: '/shots/bb-mpeweek.png', variant: 'banner' }],
-  },
-  {
-    title: 'AB InBev — Product Locator',
-    host: 'gooseisland.com',
-    url: null,
+    id: 'abinbev',
+    name: 'AB InBev — Product Locator',
+    logo: '/logos/ab-inbev.svg',
     shots: [
       { id: 'shot-locator-goose', src: '/shots/locator-goose.png', variant: 'tablet' },
       { id: 'shot-locator-ritas', src: '/shots/locator-ritas.png', variant: 'portrait' },
+    ],
+  },
+  {
+    id: 'bb',
+    name: 'Banco do Brasil — MPE Week',
+    logo: '/logos/banco-do-brasil-v2.svg',
+    shots: [{ id: 'shot-bb-mpeweek', src: '/shots/bb-mpeweek.png', variant: 'banner' }],
+  },
+  {
+    id: 'sherpa',
+    name: 'Sherpa42',
+    logo: '/logos/sherpa.svg',
+    shots: [
+      { id: 'shot-sherpa-desktop', src: '/shots/sherpa-desktop.png', variant: 'wide' },
+      { id: 'shot-sherpa-mobile', src: '/shots/sherpa-mobile.png', variant: 'portrait' },
     ],
   },
 ]
@@ -344,6 +417,42 @@ function Card({ card, index, hovered, onHover, onOpen, t, expanded }) {
   )
 }
 
+// A client project: branded, collapsed by default, expands in place to reveal
+// the full write-up and screenshots. No external links — everything stays here.
+function ClientCard({ item, text, labels }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className={'client-card' + (open ? ' is-open' : '')}>
+      <button className="client-head" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
+        <img className="client-logo" src={item.logo} alt="" />
+        <span className="client-main">
+          <span className="client-name">{item.name}</span>
+          <span className="client-desc">{text.desc}</span>
+        </span>
+        <span className="tag">{text.tag}</span>
+        <span className="client-toggle">
+          <span className="client-toggle-label">{open ? labels.less : labels.more}</span>
+          <span className="client-chevron">&#9662;</span>
+        </span>
+      </button>
+      {open && (
+        <div className="client-body">
+          <p className="client-full">{text.full}</p>
+          {item.shots?.length > 0 && (
+            <div className="shots">
+              {item.shots.map((s) => (
+                <div key={s.id} className={'shot shot--' + s.variant}>
+                  <img className="shot-img" src={s.src} alt={item.name} loading="lazy" />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
 function WorkModal({ t }) {
   return (
     <div>
@@ -351,38 +460,16 @@ function WorkModal({ t }) {
         <div className="section-index">{t.work.idx}</div>
         <h2>{t.work.title}</h2>
         <p className="modal-subtitle">{t.work.subtitle}</p>
-
-        <div className="project-list">
-          {PROJECTS.map((p, i) => {
-            const Tag = p.url ? 'a' : 'div'
-            const linkProps = p.url
-              ? { href: p.url, target: '_blank', rel: 'noopener noreferrer' }
-              : {}
-            return (
-              <Tag
-                key={p.n}
-                className={'project-row' + (p.url ? '' : ' project-row--static')}
-                {...linkProps}
-              >
-                <span className="row-index">{p.n}</span>
-                <span className="project-main">
-                  <span className="project-name">{p.name}</span>
-                  <span className="project-desc">{t.projectDescs[i]}</span>
-                </span>
-                {p.url && <span className="project-host">{p.host}</span>}
-                {p.url && <span className="row-arrow">&#8599;</span>}
-              </Tag>
-            )
-          })}
-        </div>
       </div>
 
+      {/* Founder ventures — the lead story: products built with my own risk. */}
+      <div className="group-label">{t.work.venturesLabel}</div>
       <div className="featured-list">
-        {FEATURED.map((f, i) => (
-          <div key={f.title} className="featured-entry">
+        {VENTURES.map((f, i) => (
+          <div key={f.id} className="featured-entry">
             <div className="featured-title-row">
               <span className="featured-title">{f.title}</span>
-              <span className="tag">{t.featured[i].tag}</span>
+              <span className="tag">{t.ventures[i].tag}</span>
               <span className="spacer" />
               {f.url && (
                 <a className="featured-host" href={f.url} target="_blank" rel="noopener noreferrer">
@@ -390,9 +477,19 @@ function WorkModal({ t }) {
                 </a>
               )}
             </div>
-            <p className="featured-desc">{t.featured[i].desc}</p>
+            <p className="featured-desc">{t.ventures[i].desc}</p>
+            {t.ventures[i].stats && (
+              <div className="venture-stats">
+                {t.ventures[i].stats.map((s, si) => (
+                  <div key={si} className="venture-stat">
+                    <span className="venture-stat-v">{s.v}</span>
+                    <span className="venture-stat-l">{s.l}</span>
+                  </div>
+                ))}
+              </div>
+            )}
             {f.shots.some((s) => s.src) && (
-              <div className="shots">
+              <div className={'shots' + (f.shotsGrid ? ' shots--grid' : '')}>
                 {f.shots
                   .filter((shot) => shot.src)
                   .map((shot) => (
@@ -405,6 +502,14 @@ function WorkModal({ t }) {
           </div>
         ))}
       </div>
+
+      {/* Client work — branded cards that expand in place, no external links. */}
+      <div className="group-label group-label--client">{t.work.clientLabel}</div>
+      <div className="client-list">
+        {CLIENT_WORK.map((p, i) => (
+          <ClientCard key={p.id} item={p} text={t.clientWork[i]} labels={t.work} />
+        ))}
+      </div>
     </div>
   )
 }
@@ -414,7 +519,8 @@ function ServicesModal({ t }) {
     <div>
       <div className="section-index">{t.services.idx}</div>
       <h2>{t.services.title}</h2>
-      <p className="modal-subtitle">{t.services.subtitle}</p>
+      <p className="modal-subtitle modal-subtitle--tight">{t.services.positioning}</p>
+      <div className="for-who">{t.services.forWho}</div>
       <div className="services-grid">
         {t.serviceItems.map((s, i) => (
           <div key={i} className="service-cell">
@@ -424,12 +530,18 @@ function ServicesModal({ t }) {
           </div>
         ))}
       </div>
+      <div className="how-work">
+        <span className="how-work-label">{t.services.howLabel}</span>
+        <p className="how-work-text">{t.services.howText}</p>
+      </div>
       <div className="credentials">
         <span className="credentials-label">{t.services.credLabel}</span>
         <span className="spacer" />
         <span className="credentials-text">
           {t.services.credBefore}
           <strong>Wix</strong>
+          {t.services.credMid}
+          <strong>Meu Ecommerce</strong>
           {t.services.credAfter}
         </span>
       </div>
@@ -533,9 +645,9 @@ const POS4 = ['tl', 'tr', 'bl', 'br']
 const ROT4 = [-5, 5, 4, -5]
 
 const WORK_SHOTS = [
-  { src: '/shots/mytown-desktop.png', pos: 'tl', size: 'wide', rot: -5 },
+  { src: '/shots/meuecom-desktop.png', pos: 'tl', size: 'wide', rot: -5 },
   { src: '/shots/educa-1.png', pos: 'tr', size: 'phone', rot: 6 },
-  { src: '/shots/sherpa-desktop.png', pos: 'bl', size: 'wide', rot: 5 },
+  { src: '/shots/mytown-desktop.png', pos: 'bl', size: 'wide', rot: 5 },
   { src: '/shots/locator-goose.png', pos: 'br', size: 'tablet', rot: -6 },
 ]
 
@@ -699,6 +811,7 @@ export default function App() {
                   <br />
                   <span className="hero-line2">{t.hero2}</span>
                 </h1>
+                <div className="hero-cred">{t.heroCred}</div>
               </div>
 
               <div className="cards">
