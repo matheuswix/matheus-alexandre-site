@@ -713,6 +713,20 @@ a {
   transform: rotate(90deg);
 }
 
+/* Mobile-only scroll progress bar (enabled inside the mobile media query). */
+.modal-progress {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 70;
+}
+
 /* shared modal header */
 .section-index {
   font-family: 'Geist Mono', monospace;
@@ -1478,8 +1492,172 @@ a {
     padding: 0 18px 20px;
   }
 
-  /* App-suite grid stacks to one column so each scene stays legible */
+  /* Screenshots become swipeable, snap-aligned carousels. The partial peek of
+     the next shot is the affordance that says "this scrolls sideways". */
+  .shots,
   .shots--grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .shots::-webkit-scrollbar,
+  .shots--grid::-webkit-scrollbar {
+    display: none;
+  }
+  .shot {
+    height: auto;
+    scroll-snap-align: center;
+  }
+  .shots--grid .shot {
+    width: auto;
+  }
+  .shot--portrait {
+    flex: 0 0 62%;
+  }
+  .shot--wide,
+  .shot--banner,
+  .shot--app {
+    flex: 0 0 88%;
+  }
+  .shot--tablet {
+    flex: 0 0 72%;
+  }
+
+  /* Press states stand in for hover. Kept under 200ms so touch feels instant. */
+  .card,
+  .btn,
+  .client-head,
+  .book-call,
+  .contact-row,
+  .project-row {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card {
+    transition: transform 0.15s ease, background 0.2s ease;
+  }
+  .card:active {
+    transform: scale(0.975);
+  }
+  .btn:active {
+    transform: scale(0.96);
+  }
+  .client-head:active {
+    background: #fafaf9;
+  }
+  .book-call:active,
+  .contact-row:active {
+    transform: scale(0.985);
+  }
+
+  /* Scroll drives the motion that hover drives on desktop. Progressive
+     enhancement: without support the tiles keep their static expanded state. */
+  @supports (animation-timeline: view()) {
+    /* `overflow: hidden` would make these scroll containers and swallow the
+       view timeline. `clip` crops identically without that side effect, but it
+       also restores the content-based `min-width: auto` these flex items had
+       waived, so pin it back to 0 or long copy stretches the layout. */
+    .panel,
+    .card {
+      overflow: clip;
+      min-width: 0;
+    }
+    /* The fan is driven by the card's own entry, not each tile's. */
+    .card {
+      view-timeline: --card-view block;
+    }
+    .tile {
+      animation: tile-fan linear both;
+      animation-timeline: --card-view;
+      animation-range: entry 15% entry 85%;
+    }
+    .modal-subtitle,
+    .for-who,
+    .modal-section,
+    .group-label,
+    .featured-entry,
+    .client-card,
+    .service-cell,
+    .how-work,
+    .credentials,
+    .now-item,
+    .off-clock {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 8% entry 60%;
+    }
+    .hero-text {
+      animation: hero-recede linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 240px;
+    }
+    .modal-progress {
+      display: block;
+      animation: progress-grow linear both;
+      animation-timeline: scroll(nearest block);
+    }
+  }
+}
+
+/* ---------- Mobile motion keyframes ---------- */
+/* Tiles fan out from their resting geometry (--tx/--ty/--rot set inline in
+   App.jsx) to the same spread the desktop hover produces. */
+@keyframes tile-fan {
+  from {
+    transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) rotate(var(--rot))
+      scale(1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.07);
+  }
+  to {
+    transform: translate(-50%, -50%)
+      translate(calc(var(--tx) * 2.3), calc(var(--ty) - 9px))
+      rotate(calc(var(--rot) * 1.32)) scale(1.08);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.14);
+  }
+}
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes hero-recede {
+  to {
+    opacity: 0.5;
+    transform: translateY(-12px) scale(0.97);
+  }
+}
+@keyframes progress-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Motion is decoration here, so it all yields to the reduced-motion setting. */
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .modal-subtitle,
+  .for-who,
+  .modal-section,
+  .group-label,
+  .featured-entry,
+  .client-card,
+  .service-cell,
+  .how-work,
+  .credentials,
+  .now-item,
+  .off-clock,
+  .hero-text,
+  .modal-progress {
+    animation: none !important;
   }
 }

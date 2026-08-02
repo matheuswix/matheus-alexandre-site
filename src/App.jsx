@@ -342,6 +342,8 @@ const CONTACTS = [
 const pad2 = (i) => String(i + 1).padStart(2, '0')
 
 // Per-tile transform, computed from the hovered flag. Appearance is handled by classes.
+// The resting geometry is also exposed as custom properties so the mobile
+// scroll-driven fan-out (see `tile-fan` in index.css) can drive the same values.
 function tileStyle(tile, hovered) {
   const spread = hovered ? 2.3 : 1
   const sc = hovered ? 1.08 : 1
@@ -349,6 +351,9 @@ function tileStyle(tile, hovered) {
   const y = tile.y + (hovered ? -9 : 0)
   const rot = tile.rot * (hovered ? 1.32 : 1)
   return {
+    '--tx': tile.x + 'px',
+    '--ty': tile.y + 'px',
+    '--rot': tile.rot + 'deg',
     transform: `translate(-50%,-50%) translate(${x}px,${y}px) rotate(${rot}deg) scale(${sc})`,
     boxShadow: hovered ? '0 14px 26px rgba(0,0,0,.14)' : '0 5px 12px rgba(0,0,0,.07)',
     zIndex: hovered ? 5 : 1,
@@ -877,6 +882,8 @@ export default function App() {
               className={'modal ' + (openCard === 'work' ? 'modal--bare' : 'modal--boxed')}
               key={openCard}
             >
+              {/* Mobile-only scroll progress, driven by the modal's scroll timeline */}
+              <div className="modal-progress" aria-hidden="true" />
               <button className="close-btn" onClick={close} aria-label="Close">
                 <span className="close-text">Close</span>
                 <span className="close-x">&times;</span>
