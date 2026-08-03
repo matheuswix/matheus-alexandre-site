@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Page not found — Matheus Alexandre</title>
+    <title>Página não encontrada — Matheus Alexandre</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -91,14 +91,13 @@
     <main class="panel">
       <div class="code">ERROR 404</div>
       <h1 id="title">
-        This page doesn’t exist.<br /><span class="muted" id="sub"
-          >The rest of the site does.</span
-        >
+        Esta página não existe.<br /><span class="muted">O resto do site existe.</span>
       </h1>
-      <a class="home" id="home" href="/">Go to the homepage <span aria-hidden="true">&#8599;</span></a>
+      <a class="home" id="home" href="/">Ir para a home <span aria-hidden="true">&#8599;</span></a>
     </main>
     <script>
-      // Match the language the visitor picked on the main site.
+      // Portuguese is the default; switch to English for visitors already on
+      // the English page or browsing in another language.
       (function () {
         var saved;
         try {
@@ -110,13 +109,14 @@
             : (navigator.language || '').toLowerCase().indexOf('pt') === 0
               ? 'pt'
               : 'en';
-        if (lang !== 'pt') return;
-        document.documentElement.lang = 'pt-BR';
-        document.title = 'Página não encontrada — Matheus Alexandre';
+        if (lang !== 'en') return;
+        document.documentElement.lang = 'en';
+        document.title = 'Page not found — Matheus Alexandre';
         document.getElementById('title').innerHTML =
-          'Esta página não existe.<br><span class="muted">O resto do site existe.</span>';
+          'This page doesn’t exist.<br><span class="muted">The rest of the site does.</span>';
+        document.getElementById('home').setAttribute('href', '/en/');
         document.getElementById('home').innerHTML =
-          'Ir para a home <span aria-hidden="true">&#8599;</span>';
+          'Go to the homepage <span aria-hidden="true">&#8599;</span>';
       })();
     </script>
   </body>

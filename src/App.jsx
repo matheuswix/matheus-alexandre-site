@@ -734,8 +734,18 @@ function PreviewLayer({ hovered, t }) {
   )
 }
 
+// Portuguese lives at "/", English at "/en/". Each is a real page with its own
+// meta, so a shared link previews in the language it was shared in.
+const LANG_PATH = { pt: '/', en: '/en/' }
+
+function langFromPath() {
+  return window.location.pathname.replace(/\/+$/, '') === '/en' ? 'en' : null
+}
+
 function getInitialLang() {
-  if (typeof window === 'undefined') return 'en'
+  if (typeof window === 'undefined') return 'pt'
+  const fromPath = langFromPath()
+  if (fromPath) return fromPath
   const saved = window.localStorage.getItem('lang')
   if (saved === 'en' || saved === 'pt') return saved
   return (window.navigator.language || '').toLowerCase().startsWith('pt') ? 'pt' : 'en'
@@ -761,6 +771,13 @@ export default function App() {
     return () => mq.removeEventListener('change', onChange)
   }, [])
 
+  // Keep the language in step with the URL when using back and forward.
+  useEffect(() => {
+    const onPop = () => setLang(langFromPath() ?? 'pt')
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
   // Esc closes any open modal (listener added on mount, removed on unmount).
   useEffect(() => {
     const onKey = (e) => {
@@ -777,9 +794,20 @@ export default function App() {
     window.localStorage.setItem('lang', lang)
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en'
     document.title = t.meta.title
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute('content', t.meta.description)
+    const set = (sel, attr, value) =>
+      document.querySelector(sel)?.setAttribute(attr, value)
+    set('meta[name="description"]', 'content', t.meta.description)
+    // Keep the shareable tags in step for anything that reads the rendered DOM.
+    const url = 'https://matheus.cc' + LANG_PATH[lang]
+    set('link[rel="canonical"]', 'href', url)
+    set('meta[property="og:url"]', 'content', url)
+    set('meta[property="og:title"]', 'content', t.meta.title)
+    set('meta[property="og:description"]', 'content', t.meta.description)
+    set('meta[name="twitter:title"]', 'content', t.meta.title)
+    set('meta[name="twitter:description"]', 'content', t.meta.description)
+    const img = 'https://matheus.cc/og-image' + (lang === 'en' ? '-en' : '') + '.png'
+    set('meta[property="og:image"]', 'content', img)
+    set('meta[name="twitter:image"]', 'content', img)
   }, [lang, t])
 
   // While a modal is open it owns the page: lock the background scroll, move
@@ -815,6 +843,16 @@ export default function App() {
     }
   }
 
+  // Switching language also moves the URL, so the address bar and any link the
+  // visitor copies match what they are reading.
+  const switchLang = (next) => {
+    setLang(next)
+    const path = LANG_PATH[next]
+    if (window.location.pathname !== path) {
+      window.history.pushState({ lang: next }, '', path)
+    }
+  }
+
   const close = () => setOpenCard(null)
 
   const handleHover = (id, leavingId) => {
@@ -834,7 +872,7 @@ export default function App() {
         <div className="lang-toggle">
           <button
             className={'lang-btn' + (lang === 'en' ? ' is-active' : '')}
-            onClick={() => setLang('en')}
+            onClick={() => switchLang('en')}
             aria-label="English"
           >
             EN
@@ -842,7 +880,7 @@ export default function App() {
           <span className="lang-sep">/</span>
           <button
             className={'lang-btn' + (lang === 'pt' ? ' is-active' : '')}
-            onClick={() => setLang('pt')}
+            onClick={() => switchLang('pt')}
             aria-label="Português"
           >
             PT

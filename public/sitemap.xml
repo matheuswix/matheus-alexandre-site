@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
   <url>
     <loc>https://matheus.cc/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://matheus.cc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://matheus.cc/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matheus.cc/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://matheus.cc/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://matheus.cc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://matheus.cc/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matheus.cc/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

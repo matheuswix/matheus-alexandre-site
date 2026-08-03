@@ -6,7 +6,7 @@
   "description": "Personal/portfolio site for Matheus Alexandre — engineering partner for product-led founders.",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-en.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
