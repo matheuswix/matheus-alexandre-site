@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matheus.cc/sitemap.xml

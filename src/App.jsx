@@ -10,6 +10,11 @@ const I18N = {
     hero1: 'The engineering partner',
     hero2: 'product-led founders build with.',
     heroCred: 'Software Engineer at Wix · founder of Meu Ecommerce (2M+ operations/month)',
+    meta: {
+      title: 'Matheus Alexandre — Engineering partner for product-led founders',
+      description:
+        'A founder who designs, builds and ships your product. Software Engineer at Wix and founder of Meu Ecommerce, 2M+ operations a month. First call is free.',
+    },
     cards: { work: 'Work', experience: 'How I help', now: 'About', contact: 'Contact' },
     tiles: { design: 'Design', mobileApps: 'Mobile Apps', shipping: 'Shipping', building: 'Building' },
     ctaStart: 'Start a project',
@@ -110,6 +115,11 @@ const I18N = {
     hero1: 'O engenheiro de software',
     hero2: 'com quem founders constroem produtos.',
     heroCred: 'Engenheiro no Wix · founder do Meu Ecommerce (2 mi+ operações/mês)',
+    meta: {
+      title: 'Matheus Alexandre — Engenheiro de software para founders product-led',
+      description:
+        'Um founder que projeta, constrói e lança o seu produto. Engenheiro de Software no Wix e founder do Meu Ecommerce, 2 mi+ operações por mês. A primeira call é grátis.',
+    },
     cards: { work: 'Projetos', experience: 'Como ajudo', now: 'Sobre', contact: 'Contato' },
     tiles: { design: 'Design', mobileApps: 'Apps', shipping: 'No ar', building: 'Construindo' },
     ctaStart: 'Começar um projeto',
@@ -760,11 +770,17 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  // Persist language choice and reflect it on <html lang>.
+  // Persist language choice and reflect it on <html lang>, the tab title and
+  // the description. Social scrapers read the static English tags in
+  // index.html, since a single URL can only carry one set.
   useEffect(() => {
     window.localStorage.setItem('lang', lang)
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en'
-  }, [lang])
+    document.title = t.meta.title
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute('content', t.meta.description)
+  }, [lang, t])
 
   // While a modal is open it owns the page: lock the background scroll, move
   // focus into the dialog, and hand focus back to the card that opened it.
