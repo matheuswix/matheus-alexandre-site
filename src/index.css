@@ -1498,6 +1498,11 @@ a {
   .shots--grid {
     display: flex;
     gap: 12px;
+    /* Desktop stretches shots to a shared height; in a carousel that would
+       override each shot's own aspect ratio. Size them individually and centre
+       them, so a short landscape shot next to a tall phone shot reads as
+       deliberate rather than as a gap. */
+    align-items: center;
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
@@ -1507,23 +1512,23 @@ a {
   .shots--grid::-webkit-scrollbar {
     display: none;
   }
-  .shot {
-    height: auto;
-    scroll-snap-align: center;
-  }
+  /* Two-class selectors here on purpose: the desktop `.shots--grid .shot` rule
+     outranks a bare `.shot--app`, which would leave the item at its intrinsic
+     image width inside the carousel. */
+  .shots .shot,
   .shots--grid .shot {
     width: auto;
-  }
-  .shot--portrait {
-    flex: 0 0 62%;
-  }
-  .shot--wide,
-  .shot--banner,
-  .shot--app {
+    height: auto;
     flex: 0 0 88%;
+    scroll-snap-align: center;
   }
-  .shot--tablet {
-    flex: 0 0 72%;
+  .shots .shot--portrait,
+  .shots--grid .shot--portrait {
+    flex-basis: 62%;
+  }
+  .shots .shot--tablet,
+  .shots--grid .shot--tablet {
+    flex-basis: 72%;
   }
 
   /* Press states stand in for hover. Kept under 200ms so touch feels instant. */
