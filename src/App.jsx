@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 // Single theme variable (README §Design Tokens). Spotlight glows derive from the same yellow
 // via the --accent-rgb CSS var in index.css, so they stay in sync.
@@ -231,7 +231,7 @@ const CARD_DATA = [
     tiles: [
       { kind: 'card', tint: 'green', labelKey: 'shipping', x: -13, y: 7, rot: -11 },
       { kind: 'card', tint: 'amber', labelKey: 'building', x: 13, y: 7, rot: 11 },
-      { kind: 'face', src: '/genmoji.png', x: 0, y: -3, rot: -2 },
+      { kind: 'face', src: '/genmoji.webp', x: 0, y: -3, rot: -2 },
     ],
   },
   {
@@ -253,10 +253,10 @@ const VENTURES = [
     url: 'https://www.meuecommerce.ia.br',
     shotsGrid: true,
     shots: [
-      { id: 'shot-meuecom-frete', src: '/shots/meuecom-frete.png', variant: 'app' },
-      { id: 'shot-meuecom-rastreio', src: '/shots/meuecom-rastreio.png', variant: 'app' },
-      { id: 'shot-meuecom-parcelamento', src: '/shots/meuecom-parcelamento.png', variant: 'app' },
-      { id: 'shot-meuecom-pix', src: '/shots/meuecom-pix.png', variant: 'app' },
+      { id: 'shot-meuecom-frete', src: '/shots/meuecom-frete.webp', variant: 'app' },
+      { id: 'shot-meuecom-rastreio', src: '/shots/meuecom-rastreio.webp', variant: 'app' },
+      { id: 'shot-meuecom-parcelamento', src: '/shots/meuecom-parcelamento.webp', variant: 'app' },
+      { id: 'shot-meuecom-pix', src: '/shots/meuecom-pix.webp', variant: 'app' },
     ],
   },
   {
@@ -265,9 +265,9 @@ const VENTURES = [
     host: 'educa.social',
     url: 'https://educa.social/',
     shots: [
-      { id: 'shot-educa-1', src: '/shots/educa-1.png', variant: 'portrait' },
-      { id: 'shot-educa-2', src: '/shots/educa-2.png', variant: 'portrait' },
-      { id: 'shot-educa-3', src: '/shots/educa-3.png', variant: 'portrait' },
+      { id: 'shot-educa-1', src: '/shots/educa-1.webp', variant: 'portrait' },
+      { id: 'shot-educa-2', src: '/shots/educa-2.webp', variant: 'portrait' },
+      { id: 'shot-educa-3', src: '/shots/educa-3.webp', variant: 'portrait' },
     ],
   },
 ]
@@ -279,9 +279,9 @@ const CLIENT_WORK = [
     name: 'NTT — My Town Page',
     logo: '/logos/ntt-logo.svg',
     shots: [
-      { id: 'shot-mytown-desktop', src: '/shots/mytown-desktop.png', variant: 'wide' },
-      { id: 'shot-mytown-1', src: '/shots/mytown-mobile-1.png', variant: 'portrait' },
-      { id: 'shot-mytown-2', src: '/shots/mytown-mobile-2.png', variant: 'portrait' },
+      { id: 'shot-mytown-desktop', src: '/shots/mytown-desktop.webp', variant: 'wide' },
+      { id: 'shot-mytown-1', src: '/shots/mytown-mobile-1.webp', variant: 'portrait' },
+      { id: 'shot-mytown-2', src: '/shots/mytown-mobile-2.webp', variant: 'portrait' },
     ],
   },
   {
@@ -289,23 +289,23 @@ const CLIENT_WORK = [
     name: 'AB InBev — Product Locator',
     logo: '/logos/ab-inbev.svg',
     shots: [
-      { id: 'shot-locator-goose', src: '/shots/locator-goose.png', variant: 'tablet' },
-      { id: 'shot-locator-ritas', src: '/shots/locator-ritas.png', variant: 'portrait' },
+      { id: 'shot-locator-goose', src: '/shots/locator-goose.webp', variant: 'tablet' },
+      { id: 'shot-locator-ritas', src: '/shots/locator-ritas.webp', variant: 'portrait' },
     ],
   },
   {
     id: 'bb',
     name: 'Banco do Brasil — MPE Week',
     logo: '/logos/banco-do-brasil-v2.svg',
-    shots: [{ id: 'shot-bb-mpeweek', src: '/shots/bb-mpeweek.png', variant: 'banner' }],
+    shots: [{ id: 'shot-bb-mpeweek', src: '/shots/bb-mpeweek.webp', variant: 'banner' }],
   },
   {
     id: 'sherpa',
     name: 'Sherpa42',
     logo: '/logos/sherpa.svg',
     shots: [
-      { id: 'shot-sherpa-desktop', src: '/shots/sherpa-desktop.png', variant: 'wide' },
-      { id: 'shot-sherpa-mobile', src: '/shots/sherpa-mobile.png', variant: 'portrait' },
+      { id: 'shot-sherpa-desktop', src: '/shots/sherpa-desktop.webp', variant: 'wide' },
+      { id: 'shot-sherpa-mobile', src: '/shots/sherpa-mobile.webp', variant: 'portrait' },
     ],
   },
 ]
@@ -314,11 +314,11 @@ const FUN_FACT_EMOJIS = ['🌎', '🏋️', '🏃', '✈️']
 
 // Personal photos for the About gallery — scattered collage around the Fun-facts card.
 const GALLERY = [
-  { src: '/about/about-desk.jpg', pos: { top: '6px', left: '34px' }, w: 168, rot: -6 },
-  { src: '/about/about-running.jpg', pos: { bottom: '4px', left: '6px' }, w: 156, rot: 4 },
-  { src: '/about/about-gym.jpg', pos: { bottom: '-16px', left: '286px' }, w: 150, rot: 3 },
-  { src: '/about/about-plane.jpg', pos: { top: '-4px', right: '36px' }, w: 160, rot: 6 },
-  { src: '/about/about-cafe.jpg', pos: { bottom: '8px', right: '8px' }, w: 166, rot: -5 },
+  { src: '/about/about-desk.webp', pos: { top: '6px', left: '34px' }, w: 168, rot: -6 },
+  { src: '/about/about-running.webp', pos: { bottom: '4px', left: '6px' }, w: 156, rot: 4 },
+  { src: '/about/about-gym.webp', pos: { bottom: '-16px', left: '286px' }, w: 150, rot: 3 },
+  { src: '/about/about-plane.webp', pos: { top: '-4px', right: '36px' }, w: 160, rot: 6 },
+  { src: '/about/about-cafe.webp', pos: { bottom: '8px', right: '8px' }, w: 166, rot: -5 },
 ]
 
 // Client logos for the homepage proof strip (monochrome treatment applied in CSS).
@@ -377,11 +377,15 @@ function Card({ card, index, hovered, onHover, onOpen, t, expanded }) {
   }
 
   return (
-    <div
+    <button
+      type="button"
       className="card"
+      aria-haspopup="dialog"
       onMouseEnter={() => onHover(card.id)}
       onMouseLeave={handleLeave}
       onMouseMove={handleMove}
+      onFocus={() => onHover(card.id)}
+      onBlur={() => onHover(null, card.id)}
       onClick={() => onOpen(card.id)}
     >
       <div className="spotlight spotlight-border" aria-hidden="true" data-spotlight="1" />
@@ -418,7 +422,7 @@ function Card({ card, index, hovered, onHover, onOpen, t, expanded }) {
         <span>{t.cards[card.id]}</span>
         <span className="arrow">&#8599;</span>
       </div>
-    </div>
+    </button>
   )
 }
 
@@ -650,10 +654,10 @@ const POS4 = ['tl', 'tr', 'bl', 'br']
 const ROT4 = [-5, 5, 4, -5]
 
 const WORK_SHOTS = [
-  { src: '/shots/meuecom-desktop.png', pos: 'tl', size: 'wide', rot: -5 },
-  { src: '/shots/educa-1.png', pos: 'tr', size: 'phone', rot: 6 },
-  { src: '/shots/mytown-desktop.png', pos: 'bl', size: 'wide', rot: 5 },
-  { src: '/shots/locator-goose.png', pos: 'br', size: 'tablet', rot: -6 },
+  { src: '/shots/meuecom-desktop.webp', pos: 'tl', size: 'wide', rot: -5 },
+  { src: '/shots/educa-1.webp', pos: 'tr', size: 'phone', rot: 6 },
+  { src: '/shots/mytown-desktop.webp', pos: 'bl', size: 'wide', rot: 5 },
+  { src: '/shots/locator-goose.webp', pos: 'br', size: 'tablet', rot: -6 },
 ]
 
 function PreviewItem({ pos, rot, delay, children }) {
@@ -734,6 +738,8 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(
     () => typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches
   )
+  const modalRef = useRef(null)
+  const lastFocusRef = useRef(null)
 
   const t = I18N[lang]
 
@@ -759,6 +765,39 @@ export default function App() {
     window.localStorage.setItem('lang', lang)
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en'
   }, [lang])
+
+  // While a modal is open it owns the page: lock the background scroll, move
+  // focus into the dialog, and hand focus back to the card that opened it.
+  useEffect(() => {
+    if (openCard) {
+      lastFocusRef.current = document.activeElement
+      document.body.style.overflow = 'hidden'
+      const id = requestAnimationFrame(() => modalRef.current?.focus())
+      return () => {
+        cancelAnimationFrame(id)
+        document.body.style.overflow = ''
+      }
+    }
+    lastFocusRef.current?.focus?.()
+  }, [openCard])
+
+  // Keep Tab inside the dialog so keyboard users can't wander behind it.
+  const trapFocus = (e) => {
+    if (e.key !== 'Tab' || !modalRef.current) return
+    const items = modalRef.current.querySelectorAll(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+    if (!items.length) return
+    const first = items[0]
+    const last = items[items.length - 1]
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault()
+      last.focus()
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }
 
   const close = () => setOpenCard(null)
 
@@ -797,7 +836,7 @@ export default function App() {
         {/* Header: monogram doubles as "home" — closes any open modal */}
         <header className="header">
           <div className="monogram" title="Matheus Alexandre" onClick={close}>
-            <img className="monogram-img" src="/matheus.jpg" alt="Matheus Alexandre" />
+            <img className="monogram-img" src="/matheus.webp" alt="Matheus Alexandre" />
             <span className="monogram-dot" style={{ background: ACCENT }} />
           </div>
         </header>
@@ -812,7 +851,7 @@ export default function App() {
               <div className="hero-text">
                 <div className="eyebrow">MATHEUS&nbsp;&nbsp;ALEXANDRE</div>
                 <h1 className="hero">
-                  <span className="hero-line1">{t.hero1}</span>
+                  <span className="hero-line1">{t.hero1}</span>{' '}
                   <br />
                   <span className="hero-line2">{t.hero2}</span>
                 </h1>
@@ -881,6 +920,12 @@ export default function App() {
             <div
               className={'modal ' + (openCard === 'work' ? 'modal--bare' : 'modal--boxed')}
               key={openCard}
+              ref={modalRef}
+              role="dialog"
+              aria-modal="true"
+              aria-label={t.cards[openCard]}
+              tabIndex={-1}
+              onKeyDown={trapFocus}
             >
               {/* Mobile-only scroll progress, driven by the modal's scroll timeline */}
               <div className="modal-progress" aria-hidden="true" />

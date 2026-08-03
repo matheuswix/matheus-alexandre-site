@@ -106,18 +106,18 @@ a {
   cursor: pointer;
   font: inherit;
   letter-spacing: inherit;
-  color: #c2c2c2;
+  color: #6d6d6d;
   transition: color 0.2s ease;
 }
 .lang-btn:hover {
-  color: #6e6e6e;
+  color: #0e0e0e;
 }
 .lang-btn.is-active {
   color: #0e0e0e;
   font-weight: 600;
 }
 .lang-sep {
-  color: #dcdcdc;
+  color: #6d6d6d;
 }
 .header {
   flex: none;
@@ -239,7 +239,7 @@ a {
 .preview-card-index {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
-  color: #c2c2c2;
+  color: #6d6d6d;
   margin-bottom: 8px;
 }
 .preview-card-title {
@@ -279,7 +279,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 10px;
   letter-spacing: 1px;
-  color: #b0b0b0;
+  color: #6d6d6d;
 }
 .preview-pill-handle {
   font-size: 13.5px;
@@ -288,6 +288,10 @@ a {
 }
 .preview-pill--dark .preview-pill-handle {
   color: #fff;
+}
+/* Same reason as .book-call-sub: light text on the dark pill. */
+.preview-pill--dark .preview-pill-kind {
+  color: #b0b0b0;
 }
 @media (max-width: 900px) {
   .previews-layer {
@@ -320,7 +324,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 11.5px;
   letter-spacing: 3px;
-  color: #b0b0b0;
+  color: #6d6d6d;
   font-weight: 500;
 }
 
@@ -336,14 +340,14 @@ a {
   color: #0e0e0e;
 }
 .hero-line2 {
-  color: #b6b6b6;
+  color: #8e8e8e;
 }
 /* Discreet founder-credibility micro-line under the hero. */
 .hero-cred {
   font-family: 'Geist Mono', monospace;
   font-size: 12px;
   letter-spacing: 0.4px;
-  color: #a2a2a2;
+  color: #6d6d6d;
   margin-top: 6px;
 }
 
@@ -358,6 +362,14 @@ a {
 }
 
 .card {
+  /* Rendered as a <button> so the nav is reachable by keyboard; strip the
+     UA button styling that would otherwise fight the design. */
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
   position: relative;
   overflow: hidden;
   width: 160px;
@@ -523,7 +535,7 @@ a {
   z-index: 1;
 }
 .card-label .arrow {
-  color: #c4c4c4;
+  color: #6d6d6d;
   font-size: 13px;
 }
 
@@ -549,7 +561,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 10.5px;
   letter-spacing: 3px;
-  color: #c2c2c2;
+  color: #6d6d6d;
   font-weight: 500;
 }
 .logos-marquee {
@@ -630,7 +642,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.2px;
-  color: #bdbdbd;
+  color: #6d6d6d;
   text-align: center;
 }
 
@@ -727,12 +739,37 @@ a {
   z-index: 70;
 }
 
+/* Visible keyboard focus. Dark rather than accent yellow, which is too low
+   contrast on white to serve as a focus indicator. */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid #0e0e0e;
+  outline-offset: 3px;
+}
+/* The dialog takes focus programmatically; it should not draw a ring. */
+.modal:focus,
+.modal:focus-visible {
+  outline: none;
+}
+
+/* Cap the measure so long copy reads as an editorial column instead of a
+   full-width wall. Calibrated by measurement, not by the usual 65ch rule of
+   thumb: Geist's "0" is a wide 0.66em, so 1ch overshoots a real character.
+   Mobile is already narrower than this. */
+.modal-subtitle,
+.featured-desc,
+.client-full,
+.now-bio,
+.how-work-text,
+.for-who {
+  max-width: 52ch;
+}
+
 /* shared modal header */
 .section-index {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
   letter-spacing: 2px;
-  color: #b5b5b5;
+  color: #6d6d6d;
 }
 .modal h2 {
   margin: 10px 0 6px;
@@ -742,7 +779,7 @@ a {
 }
 .modal-subtitle {
   margin: 0 0 22px;
-  color: #9a9a9a;
+  color: #6d6d6d;
   font-size: 15px;
 }
 
@@ -781,7 +818,7 @@ a {
 .row-index {
   font-family: 'Geist Mono', monospace;
   font-size: 12px;
-  color: #c2c2c2;
+  color: #6d6d6d;
   width: 22px;
 }
 .project-main {
@@ -796,16 +833,16 @@ a {
 .project-desc {
   display: block;
   font-size: 13.5px;
-  color: #9a9a9a;
+  color: #6d6d6d;
   margin-top: 2px;
 }
 .project-host {
   font-family: 'Geist Mono', monospace;
   font-size: 11.5px;
-  color: #bdbdbd;
+  color: #6d6d6d;
 }
 .row-arrow {
-  color: #c4c4c4;
+  color: #6d6d6d;
   font-size: 16px;
 }
 
@@ -843,7 +880,7 @@ a {
   padding: 3px 8px;
   border-radius: 999px;
   background: #f0f0ee;
-  color: #8a8a8a;
+  color: #6d6d6d;
   font-weight: 500;
 }
 .spacer {
@@ -852,7 +889,7 @@ a {
 .featured-host {
   font-family: 'Geist Mono', monospace;
   font-size: 11.5px;
-  color: #b0b0b0;
+  color: #6d6d6d;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -889,7 +926,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.5px;
-  color: #bdbdbd;
+  color: #6d6d6d;
   overflow: hidden;
 }
 /* Shots fill the row, flex-grow set to each one's aspect ratio so mixed
@@ -939,7 +976,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
   letter-spacing: 2px;
-  color: #b5b5b5;
+  color: #6d6d6d;
   margin: 30px 4px 12px;
 }
 .group-label--client {
@@ -966,7 +1003,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 10.5px;
   letter-spacing: 0.5px;
-  color: #9a9a9a;
+  color: #6d6d6d;
   text-transform: uppercase;
 }
 /* Client project cards — collapsed brand row that expands in place. */
@@ -1017,7 +1054,7 @@ a {
 .client-desc {
   display: block;
   font-size: 13.5px;
-  color: #9a9a9a;
+  color: #6d6d6d;
   margin-top: 2px;
 }
 .client-toggle {
@@ -1031,7 +1068,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.5px;
-  color: #7a7a7a;
+  color: #6d6d6d;
   transition: background 0.2s ease, color 0.2s ease;
 }
 .client-head:hover .client-toggle {
@@ -1099,7 +1136,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
   letter-spacing: 1px;
-  color: #b0b0b0;
+  color: #6d6d6d;
 }
 .service-title {
   margin-top: 12px;
@@ -1110,7 +1147,7 @@ a {
 }
 .service-desc {
   margin: 7px 0 0;
-  color: #7a7a7a;
+  color: #6d6d6d;
   font-size: 13.5px;
   line-height: 1.55;
 }
@@ -1127,7 +1164,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 10.5px;
   letter-spacing: 1.5px;
-  color: #b5b5b5;
+  color: #6d6d6d;
 }
 .credentials-text {
   font-size: 14px;
@@ -1162,7 +1199,7 @@ a {
   font-size: 10.5px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #9a9a9a;
+  color: #6d6d6d;
 }
 .how-work-text {
   margin: 9px 0 0;
@@ -1309,7 +1346,7 @@ a {
 }
 .fun-fact-sub {
   font-size: 13px;
-  color: #9a9a9a;
+  color: #6d6d6d;
   line-height: 1.45;
 }
 
@@ -1337,6 +1374,7 @@ a {
 .book-call-sub {
   display: block;
   font-size: 13.5px;
+  /* Sits on the near-black CTA, so it stays light to keep its contrast. */
   color: #b5b5b5;
   margin-top: 3px;
 }
@@ -1359,7 +1397,7 @@ a {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
   letter-spacing: 1.5px;
-  color: #b0b0b0;
+  color: #6d6d6d;
   width: 86px;
 }
 .contact-handle {
