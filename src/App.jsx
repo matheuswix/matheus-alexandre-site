@@ -17,10 +17,11 @@ const I18N = {
     },
     cards: { work: 'Work', experience: 'Now', now: 'About', contact: 'Contact' },
     tiles: { ecom: 'Ecom', shipping: 'Shipping', building: 'Building' },
+    ctaCall: 'Book a call',
     ctaNewsletter: 'Subscribe to the newsletter',
     footnote: '*A new essay every two weeks, on Substack.',
     logosLabel: 'SHIPPED FOR',
-    newsletterPill: { title: 'NEWSLETTER', sub: 'Every two weeks' },
+    bookPill: { title: 'BOOK A CALL', sub: 'Free 15-min chat' },
     work: {
       idx: '01 / WORK',
       title: 'Products I’ve built and shipped',
@@ -98,7 +99,9 @@ const I18N = {
     contact: {
       idx: '04 / CONTACT',
       title: 'Say hello',
-      subtitle: 'About products, something I wrote, or just to say hi. I read every message.',
+      subtitle: 'About a project, something I wrote, or just to say hi. I read every message.',
+      bookTitle: 'Book a call',
+      bookSub: 'A free 15-min chat about your project.',
       newsletterTitle: 'Subscribe to the newsletter',
       newsletterSub: 'A new essay every two weeks, free, in your inbox.',
     },
@@ -114,10 +117,11 @@ const I18N = {
     },
     cards: { work: 'Projetos', experience: 'Agora', now: 'Sobre', contact: 'Contato' },
     tiles: { ecom: 'Ecom', shipping: 'No ar', building: 'Construindo' },
+    ctaCall: 'Agendar uma call',
     ctaNewsletter: 'Assinar a newsletter',
     footnote: '*Um texto novo a cada 15 dias, no Substack.',
     logosLabel: 'JÁ TRABALHEI COM',
-    newsletterPill: { title: 'NEWSLETTER', sub: 'A cada 15 dias' },
+    bookPill: { title: 'AGENDAR CALL', sub: 'Papo de 15 min, grátis' },
     work: {
       idx: '01 / PROJETOS',
       title: 'Produtos que construí e coloquei no ar',
@@ -195,7 +199,9 @@ const I18N = {
     contact: {
       idx: '04 / CONTATO',
       title: 'Diga oi',
-      subtitle: 'Para falar de produto, de algum texto meu ou só dar um oi. Eu leio todas as mensagens.',
+      subtitle: 'Para falar de um projeto, de algum texto meu ou só dar um oi. Eu leio todas as mensagens.',
+      bookTitle: 'Agendar uma call',
+      bookSub: 'Um papo gratuito de 15 min sobre o seu projeto.',
       newsletterTitle: 'Assinar a newsletter',
       newsletterSub: 'Um texto novo a cada 15 dias, de graça, no seu e-mail.',
     },
@@ -340,6 +346,7 @@ const LOGOS = [
 ]
 
 const NEWSLETTER_URL = 'https://soumatheusalexandre.substack.com'
+const CALL_URL = 'https://cal.com/matheusalexandre/intro-call'
 
 const CONTACTS = [
   { kind: 'EMAIL', handle: 'hello@matheus.cc', url: 'mailto:hello@matheus.cc', target: '_self' },
@@ -629,7 +636,14 @@ function ContactModal({ t }) {
       <div className="section-index">{t.contact.idx}</div>
       <h2>{t.contact.title}</h2>
       <p className="modal-subtitle">{t.contact.subtitle}</p>
-      <a className="book-call" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
+      <a className="book-call" href={CALL_URL} target="_blank" rel="noopener noreferrer">
+        <span>
+          <span className="book-call-title">{t.contact.bookTitle}</span>
+          <span className="book-call-sub">{t.contact.bookSub}</span>
+        </span>
+        <span className="book-call-arrow">&#8599;</span>
+      </a>
+      <a className="book-call book-call--light" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
         <span>
           <span className="book-call-title">{t.contact.newsletterTitle}</span>
           <span className="book-call-sub">{t.contact.newsletterSub}</span>
@@ -726,8 +740,8 @@ function PreviewLayer({ hovered, t }) {
         ))}
         <PreviewItem pos="br" rot={ROT4[3]} delay={180}>
           <div className="preview-pill preview-pill--dark">
-            <span className="preview-pill-kind">{t.newsletterPill.title}</span>
-            <span className="preview-pill-handle">{t.newsletterPill.sub}</span>
+            <span className="preview-pill-kind">{t.bookPill.title}</span>
+            <span className="preview-pill-handle">{t.bookPill.sub}</span>
           </div>
         </PreviewItem>
       </div>
@@ -948,16 +962,11 @@ export default function App() {
             </div>
           </div>
           <div className="cta-row">
-            <a className="btn btn-primary" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
-              {t.ctaNewsletter}
+            <a className="btn btn-primary" href={CALL_URL} target="_blank" rel="noopener noreferrer">
+              {t.ctaCall}
             </a>
-            <a
-              className="btn btn-secondary"
-              href="https://github.com/matheuswix"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
+            <a className="btn btn-secondary" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
+              {t.ctaNewsletter}
             </a>
           </div>
           <div className="footnote">{t.footnote}</div>
@@ -996,11 +1005,11 @@ export default function App() {
 
       {/* Mobile-only sticky action bar */}
       <div className="mobile-bar">
-        <a className="btn btn-primary" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
-          Newsletter
+        <a className="btn btn-primary" href={CALL_URL} target="_blank" rel="noopener noreferrer">
+          {t.ctaCall}
         </a>
-        <a className="btn btn-secondary" href="mailto:hello@matheus.cc">
-          Email
+        <a className="btn btn-secondary" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
+          Newsletter
         </a>
       </div>
     </div>
