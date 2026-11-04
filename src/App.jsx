@@ -7,13 +7,13 @@ const ACCENT = '#EAB308'
 // ---- Translations (EN / pt-BR). Brand names, links and images stay shared below. ----
 const I18N = {
   en: {
-    hero1: 'I turn ideas into products people use.',
-    hero2: 'And write about how.',
+    hero1: 'I turn ideas into products',
+    hero2: 'people love to use.',
     heroCred: 'Software Engineer at Wix · founder of Meu Ecommerce · building Cordel',
     meta: {
       title: 'Matheus Alexandre · Software engineer and founder',
       description:
-        'I turn ideas into products people use, and write about how. Software engineer at Wix, founder of Meu Ecommerce (10,000+ merchants) and maker of Cordel, an iPhone travel app.',
+        'I turn ideas into products people love to use. Software engineer at Wix, founder of Meu Ecommerce (10,000+ merchants) and maker of Cordel, an iPhone travel app.',
     },
     cards: { work: 'Work', experience: 'Now', now: 'About', contact: 'Contact' },
     tiles: { ecom: 'Ecom', shipping: 'Shipping', building: 'Building' },
@@ -73,13 +73,13 @@ const I18N = {
     now: {
       idx: '02 / NOW · NOV 2026',
       title: 'What I’m working on',
-      subtitle: 'By day, engineering at Wix. The rest of the time, building my own products. And writing about all of it.',
+      subtitle: 'By day, engineering at Wix. The rest of the time, building my own products.',
     },
     nowFronts: [
       { role: 'SOFTWARE ENGINEER', desc: 'Shipping product at enterprise scale, for teams around the world.' },
       { role: 'FOUNDER', desc: 'Shipping, tracking, installment and Pix apps for 10,000+ merchants on Wix and Shopify.' },
       { role: 'BUILDING SOLO', desc: 'My first mobile app, a travel planner you talk to. On the App Store since October.' },
-      { role: 'WRITING', desc: 'A new essay every two weeks on building products, companies and a life.' },
+      { role: 'FOUNDING ENGINEER', desc: 'An AI platform that creates on-brand social media content for schools, in minutes.' },
     ],
     about: {
       idx: '03 / ABOUT',
@@ -104,13 +104,13 @@ const I18N = {
     },
   },
   pt: {
-    hero1: 'Eu transformo ideias em produtos que pessoas usam.',
-    hero2: 'E escrevo sobre como.',
+    hero1: 'Transformo ideias em produtos',
+    hero2: 'que pessoas amam usar.',
     heroCred: 'Engenheiro no Wix · founder do Meu Ecommerce · construindo o Cordel',
     meta: {
       title: 'Matheus Alexandre · Engenheiro de software e founder',
       description:
-        'Eu transformo ideias em produtos que pessoas usam, e escrevo sobre como. Engenheiro de software no Wix, founder do Meu Ecommerce (10 mil+ lojistas) e criador do Cordel, um app de viagem para iPhone.',
+        'Transformo ideias em produtos que pessoas amam usar. Engenheiro de software no Wix, founder do Meu Ecommerce (10 mil+ lojistas) e criador do Cordel, um app de viagem para iPhone.',
     },
     cards: { work: 'Projetos', experience: 'Agora', now: 'Sobre', contact: 'Contato' },
     tiles: { ecom: 'Ecom', shipping: 'No ar', building: 'Construindo' },
@@ -170,13 +170,13 @@ const I18N = {
     now: {
       idx: '02 / AGORA · NOV 2026',
       title: 'No que estou trabalhando',
-      subtitle: 'De dia, engenharia no Wix. No resto do tempo, construindo os meus próprios produtos. E escrevendo sobre tudo isso.',
+      subtitle: 'De dia, engenharia no Wix. No resto do tempo, construindo os meus próprios produtos.',
     },
     nowFronts: [
       { role: 'ENGENHEIRO DE SOFTWARE', desc: 'Entregando produto em escala enterprise, para times no mundo todo.' },
       { role: 'FOUNDER', desc: 'Apps de frete, rastreio, parcelamento e Pix para mais de 10 mil lojistas no Wix e no Shopify.' },
       { role: 'CONSTRUINDO SOZINHO', desc: 'Meu primeiro app mobile, um planner de viagem por conversa. Na App Store desde outubro.' },
-      { role: 'ESCREVENDO', desc: 'Um texto novo a cada 15 dias sobre construir produtos, empresas e a própria vida.' },
+      { role: 'ENGENHEIRO FUNDADOR', desc: 'Uma plataforma com IA que cria em minutos o conteúdo de redes sociais das escolas, com a cara de cada marca.' },
     ],
     about: {
       idx: '03 / SOBRE',
@@ -348,12 +348,12 @@ const CONTACTS = [
   { kind: 'GITHUB', handle: '@matheuswix', url: 'https://github.com/matheuswix', target: '_blank' },
 ]
 
-// The four things I'm doing right now. Copy (role, description) lives in I18N.nowFronts.
+// The four things I'm working on right now. Copy (role, description) lives in I18N.nowFronts.
 const NOW_FRONTS = [
   { name: 'Wix', logo: '/logos/wix-logo.svg' },
   { name: 'Meu Ecommerce', host: 'meuecommerce.com.br', url: 'https://meuecommerce.com.br' },
   { name: 'Cordel', logo: '/logos/cordel-icon.webp', host: 'App Store', url: 'https://apps.apple.com/br/app/cordel/id6810864343' },
-  { name: 'Newsletter', host: 'Substack', url: NEWSLETTER_URL },
+  { name: 'educa.social', host: 'educa.social', url: 'https://educa.social/' },
 ]
 
 const pad2 = (i) => String(i + 1).padStart(2, '0')

@@ -16,9 +16,9 @@ const outDir = resolve(root, 'dist/en')
 const PT_TITLE = 'Matheus Alexandre · Engenheiro de software e founder'
 const EN_TITLE = 'Matheus Alexandre · Software engineer and founder'
 const PT_DESC =
-  'Eu transformo ideias em produtos que pessoas usam, e escrevo sobre como. Engenheiro de software no Wix, founder do Meu Ecommerce (10 mil+ lojistas) e criador do Cordel, um app de viagem para iPhone.'
+  'Transformo ideias em produtos que pessoas amam usar. Engenheiro de software no Wix, founder do Meu Ecommerce (10 mil+ lojistas) e criador do Cordel, um app de viagem para iPhone.'
 const EN_DESC =
-  'I turn ideas into products people use, and write about how. Software engineer at Wix, founder of Meu Ecommerce (10,000+ merchants) and maker of Cordel, an iPhone travel app.'
+  'I turn ideas into products people love to use. Software engineer at Wix, founder of Meu Ecommerce (10,000+ merchants) and maker of Cordel, an iPhone travel app.'
 const PT_OG_DESC =
   'Engenheiro de software no Wix, founder do Meu Ecommerce e criador do Cordel. Escrevo sobre construir produtos a cada 15 dias.'
 const EN_OG_DESC =
@@ -27,8 +27,8 @@ const PT_TW_DESC =
   'Engenheiro de software no Wix, founder do Meu Ecommerce e criador do Cordel.'
 const EN_TW_DESC =
   'Software engineer at Wix, founder of Meu Ecommerce and maker of Cordel.'
-const PT_ALT = 'Matheus Alexandre: eu transformo ideias em produtos que pessoas usam'
-const EN_ALT = 'Matheus Alexandre: I turn ideas into products people use'
+const PT_ALT = 'Matheus Alexandre: transformo ideias em produtos que pessoas amam usar'
+const EN_ALT = 'Matheus Alexandre: I turn ideas into products people love to use'
 
 const swaps = [
   ['<html lang="pt-BR">', '<html lang="en">'],
