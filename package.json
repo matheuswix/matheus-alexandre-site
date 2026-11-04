@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Personal/portfolio site for Matheus Alexandre — engineering partner for product-led founders.",
+  "description": "Personal/portfolio site for Matheus Alexandre — software engineer and founder.",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/build-en.mjs",

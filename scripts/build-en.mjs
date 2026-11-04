@@ -13,23 +13,22 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const src = resolve(root, 'dist/index.html')
 const outDir = resolve(root, 'dist/en')
 
-const PT_TITLE = 'Matheus Alexandre — Engenheiro de software para founders product-led'
-const EN_TITLE = 'Matheus Alexandre — Engineering partner for product-led founders'
+const PT_TITLE = 'Matheus Alexandre · Engenheiro de software e founder'
+const EN_TITLE = 'Matheus Alexandre · Software engineer and founder'
 const PT_DESC =
-  'Um founder que projeta, constrói e lança o seu produto. Engenheiro de Software no Wix e founder do Meu Ecommerce, 2 mi+ operações por mês. A primeira call é grátis.'
+  'Eu transformo ideias em produtos que pessoas usam, e escrevo sobre como. Engenheiro de software no Wix, founder do Meu Ecommerce (10 mil+ lojistas) e criador do Cordel, um app de viagem para iPhone.'
 const EN_DESC =
-  'A founder who designs, builds and ships your product. Software Engineer at Wix and founder of Meu Ecommerce, 2M+ operations a month. First call is free.'
+  'I turn ideas into products people use, and write about how. Software engineer at Wix, founder of Meu Ecommerce (10,000+ merchants) and maker of Cordel, an iPhone travel app.'
 const PT_OG_DESC =
-  'Um founder que projeta, constrói e lança o seu produto. Engenheiro de Software no Wix e founder do Meu Ecommerce, 2 mi+ operações por mês.'
+  'Engenheiro de software no Wix, founder do Meu Ecommerce e criador do Cordel. Escrevo sobre construir produtos a cada 15 dias.'
 const EN_OG_DESC =
-  'A founder who designs, builds and ships your product. Software Engineer at Wix and founder of Meu Ecommerce, 2M+ operations a month.'
+  'Software engineer at Wix, founder of Meu Ecommerce and maker of Cordel. Writing about building products every two weeks.'
 const PT_TW_DESC =
-  'Um founder que projeta, constrói e lança o seu produto. Engenheiro de Software no Wix e founder do Meu Ecommerce.'
+  'Engenheiro de software no Wix, founder do Meu Ecommerce e criador do Cordel.'
 const EN_TW_DESC =
-  'A founder who designs, builds and ships your product. Software Engineer at Wix and founder of Meu Ecommerce.'
-const PT_ALT =
-  'Matheus Alexandre, o engenheiro de software com quem founders constroem produtos'
-const EN_ALT = 'Matheus Alexandre, the engineering partner product-led founders build with'
+  'Software engineer at Wix, founder of Meu Ecommerce and maker of Cordel.'
+const PT_ALT = 'Matheus Alexandre: eu transformo ideias em produtos que pessoas usam'
+const EN_ALT = 'Matheus Alexandre: I turn ideas into products people use'
 
 const swaps = [
   ['<html lang="pt-BR">', '<html lang="en">'],
