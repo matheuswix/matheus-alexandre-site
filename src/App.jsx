@@ -103,7 +103,7 @@ const I18N = {
       bookTitle: 'Book a call',
       bookSub: 'A 15-min chat about your project.',
       newsletterTitle: 'Subscribe to the newsletter',
-      newsletterSub: 'A new essay every two weeks, free, in your inbox.',
+      newsletterSub: 'A new essay every two weeks, in your inbox.',
     },
   },
   pt: {
@@ -203,7 +203,7 @@ const I18N = {
       bookTitle: 'Agendar uma call',
       bookSub: 'Um papo de 15 min sobre o seu projeto.',
       newsletterTitle: 'Assinar a newsletter',
-      newsletterSub: 'Um texto novo a cada 15 dias, de graça, no seu e-mail.',
+      newsletterSub: 'Um texto novo a cada 15 dias, no seu e-mail.',
     },
   },
 }
