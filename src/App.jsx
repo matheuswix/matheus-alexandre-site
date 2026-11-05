@@ -7,36 +7,41 @@ const ACCENT = '#EAB308'
 // ---- Translations (EN / pt-BR). Brand names, links and images stay shared below. ----
 const I18N = {
   en: {
-    hero1: 'The engineering partner',
-    hero2: 'product-led founders build with.',
-    heroCred: 'Software Engineer at Wix · founder of Meu Ecommerce (2M+ operations/month)',
+    hero1: 'I turn ideas into products',
+    hero2: 'people love to use.',
+    heroCred: 'Software Engineer at Wix · founder of Meu Ecommerce · building Cordel',
     meta: {
-      title: 'Matheus Alexandre — Engineering partner for product-led founders',
+      title: 'Matheus Alexandre · Software engineer and founder',
       description:
-        'A founder who designs, builds and ships your product. Software Engineer at Wix and founder of Meu Ecommerce, 2M+ operations a month. First call is free.',
+        'I turn ideas into products people love to use. Software engineer at Wix, founder of Meu Ecommerce (10,000+ merchants) and maker of Cordel, an iPhone travel app.',
     },
-    cards: { work: 'Work', experience: 'How I help', now: 'About', contact: 'Contact' },
-    tiles: { design: 'Design', mobileApps: 'Mobile Apps', shipping: 'Shipping', building: 'Building' },
-    ctaStart: 'Start a project',
-    footnote: '*Currently taking on 1–2 founder partnerships.',
-    logosLabel: 'SHIPPED FOR',
-    bookPill: { title: 'BOOK A CALL', sub: 'Free 15-min chat' },
+    cards: { work: 'Work', experience: 'Now', now: 'About', contact: 'Contact' },
+    tiles: { ecom: 'Ecom', shipping: 'Shipping', building: 'Building' },
+    ctaCall: 'Book a call',
+    ctaNewsletter: 'Subscribe to the newsletter',
+    footnote: '*A new essay every two weeks, on Substack.',
+    logosLabel: 'SHIPPED FOR',
+    bookPill: { title: 'BOOK A CALL', sub: '15-min chat' },
     work: {
       idx: '01 / WORK',
       title: 'Products I’ve built and shipped',
-      subtitle: 'Ventures I’ve founded, plus product work for teams who needed to move fast.',
-      venturesLabel: 'VENTURES I’VE FOUNDED',
+      subtitle: 'Products I’ve founded, plus product work for teams who needed to move fast.',
+      venturesLabel: 'PRODUCTS I’VE FOUNDED',
       clientLabel: 'SELECTED CLIENT WORK',
       more: 'Details',
       less: 'Hide',
     },
     ventures: [
       {
+        tag: 'FOUNDER · BUILDING NOW',
+        desc: 'An iPhone travel app that builds your itinerary from a conversation. You describe the trip, it organizes each day, and the plan stays on your phone even offline. My first mobile app: I built it solo, from design to backend, and launched it on the App Store in October 2026.',
+      },
+      {
         tag: 'FOUNDER · ENGINEERING',
         desc: 'A suite of apps that power online stores in Brazil: shipping, tracking, installments, and Pix discounts, each one native to Wix and Shopify. As founder and head of engineering, I built the shared infrastructure the whole ecosystem runs on, and keep shipping new apps on top of it.',
         stats: [
           { v: '2M+', l: 'operations / month' },
-          { v: '8,500+', l: 'merchants served' },
+          { v: '10,000+', l: 'merchants served' },
         ],
       },
       {
@@ -66,70 +71,61 @@ const I18N = {
         full: 'Digital agency delivering websites and product work for clients. Hands-on across design and build, shipping polished, performant sites on tight timelines.',
       },
     ],
-    services: {
-      idx: '02 / SERVICES',
-      title: 'How I help founders',
-      positioning: 'Founders usually choose between a slow senior hire, an agency that doesn’t think in product, or a freelancer who can’t scale. I’m the other option: a founder who designs, builds, and ships your product like my own.',
-      forWho: 'For product-led founders, pre-seed to seed, who need a real v1 in weeks, not a team in months.',
-      howLabel: 'HOW WE WORK',
-      howText: 'No agency overhead, no rotating contractors, no long proposals. You talk to the person building it, and we start with a free 15-minute call.',
-      credLabel: 'CREDENTIALS',
-      credBefore: 'Software Engineer at ',
-      credMid: ' (Tel Aviv) and founder of ',
-      credAfter: ' (2M+ operations/month). Shipping for teams across five continents.',
+    now: {
+      idx: '02 / NOW · NOV 2026',
+      title: 'What I’m working on',
+      subtitle: 'By day, engineering at Wix. The rest of the time, building my own products.',
     },
-    serviceItems: [
-      { title: 'Idea to a live v1', desc: 'The fastest path to something real users can touch. AI-native, so it ships in weeks, on foundations that hold as you grow.' },
-      { title: 'One person, the whole product', desc: 'Design, frontend, backend, and the infrastructure underneath. No handoffs, no waiting on a separate designer, no coordination tax.' },
-      { title: 'Built to scale, not to redo', desc: 'The same production standards I ship at Wix. A v1 you grow on, not one you throw away.' },
-      { title: 'A partner, not a ticket-taker', desc: 'In your Slack and your architecture calls, making the trade-offs with you. One or two founders at a time.' },
+    nowFronts: [
+      { role: 'SOFTWARE ENGINEER', desc: 'Shipping product at enterprise scale, for teams around the world.' },
+      { role: 'FOUNDER', desc: 'Shipping, tracking, installment and Pix apps for 10,000+ merchants on Wix and Shopify.' },
+      { role: 'BUILDING SOLO', desc: 'My first mobile app, a travel planner you talk to. On the App Store since October.' },
+      { role: 'FOUNDING ENGINEER', desc: 'An AI platform that creates on-brand social media content for schools, in minutes.' },
     ],
     about: {
       idx: '03 / ABOUT',
-      title: 'What I’m up to',
-      bio: 'I’m a software engineer, and a founder. By day I ship at enterprise scale at Wix; I’ve also founded and grown my own products, like Meu Ecommerce, now handling over 2 million operations a month. So when I build with you, I make the calls like an owner, because I am one. I’ve shipped for teams across Japan, New Zealand, California, France and Brazil, at home across time zones and cultures.',
+      title: 'A bit about me',
+      bio: 'I’m a software engineer and a founder. At nine I decided I’d spend my life making things people love to use, and that’s still the job. By day I ship at enterprise scale at Wix. Outside it, I founded Meu Ecommerce, which now serves more than 10,000 merchants, and built Cordel, my first iPhone app, on my own. Along the way I’ve shipped for teams in Japan, New Zealand, California, France and Brazil.',
       offLabel: 'OFF THE CLOCK',
       offBio: 'When I’m not shipping, you’ll catch me training at the gym, pool, or park. Based in São Paulo and always planning the next trip, the consistency I bring to training is the same one I bring to the work.',
       funTitle: 'Fun facts',
     },
-    nowItems: [
-      'Open to 1–2 new founder partnerships this quarter.',
-      'Shipping product end to end at Wix, staying sharp on scale.',
-      'Growing Meu Ecommerce and educa.social, and helping early teams move faster.',
-    ],
     funFacts: [
-      { title: 'Based in São Paulo, Brazil', sub: 'Building with founders across time zones.' },
+      { title: 'Based in São Paulo, Brazil', sub: 'Working with teams across time zones.' },
       { title: 'CrossFit, gym & swim', sub: 'Training is non-negotiable.' },
       { title: 'Out for a run most mornings', sub: 'Clears the head, fuels the focus.' },
       { title: 'Always planning the next trip', sub: 'Travel keeps me curious.' },
     ],
     contact: {
       idx: '04 / CONTACT',
-      title: 'Let’s build something',
-      subtitle: 'Got an idea or an early product? Tell me where you’re stuck. The first call is free.',
+      title: 'Say hello',
+      subtitle: 'About a project, something I wrote, or just to say hi. I read every message.',
       bookTitle: 'Book a call',
-      bookSub: 'A free 15-min chat about your idea.',
+      bookSub: 'A 15-min chat about your project.',
+      newsletterTitle: 'Subscribe to the newsletter',
+      newsletterSub: 'A new essay every two weeks, in your inbox.',
     },
   },
   pt: {
-    hero1: 'O engenheiro de software',
-    hero2: 'com quem founders constroem produtos.',
-    heroCred: 'Engenheiro no Wix · founder do Meu Ecommerce (2 mi+ operações/mês)',
+    hero1: 'Transformo ideias em produtos',
+    hero2: 'que pessoas amam usar.',
+    heroCred: 'Engenheiro no Wix · founder do Meu Ecommerce · construindo o Cordel',
     meta: {
-      title: 'Matheus Alexandre — Engenheiro de software para founders product-led',
+      title: 'Matheus Alexandre · Engenheiro de software e founder',
       description:
-        'Um founder que projeta, constrói e lança o seu produto. Engenheiro de Software no Wix e founder do Meu Ecommerce, 2 mi+ operações por mês. A primeira call é grátis.',
+        'Transformo ideias em produtos que pessoas amam usar. Engenheiro de software no Wix, founder do Meu Ecommerce (10 mil+ lojistas) e criador do Cordel, um app de viagem para iPhone.',
     },
-    cards: { work: 'Projetos', experience: 'Como ajudo', now: 'Sobre', contact: 'Contato' },
-    tiles: { design: 'Design', mobileApps: 'Apps', shipping: 'No ar', building: 'Construindo' },
-    ctaStart: 'Começar um projeto',
-    footnote: '*Aberto a 1–2 parcerias com founders no momento.',
-    logosLabel: 'JÁ TRABALHEI COM',
-    bookPill: { title: 'AGENDAR CALL', sub: 'Papo de 15 min, grátis' },
+    cards: { work: 'Projetos', experience: 'Agora', now: 'Sobre', contact: 'Contato' },
+    tiles: { ecom: 'Ecom', shipping: 'No ar', building: 'Construindo' },
+    ctaCall: 'Agendar uma call',
+    ctaNewsletter: 'Assinar a newsletter',
+    footnote: '*Um texto novo a cada 15 dias, no Substack.',
+    logosLabel: 'JÁ TRABALHEI COM',
+    bookPill: { title: 'AGENDAR CALL', sub: 'Papo de 15 min' },
     work: {
       idx: '01 / PROJETOS',
       title: 'Produtos que construí e coloquei no ar',
-      subtitle: 'Negócios que eu fundei, mais trabalho de produto para times que precisavam ir rápido.',
+      subtitle: 'Produtos que eu fundei, mais trabalho de produto para times que precisavam ir rápido.',
       venturesLabel: 'O QUE EU FUNDEI',
       clientLabel: 'TRABALHO COM CLIENTES',
       more: 'Detalhes',
@@ -137,11 +133,15 @@ const I18N = {
     },
     ventures: [
       {
+        tag: 'FUNDADOR · CONSTRUINDO AGORA',
+        desc: 'Um app de viagem para iPhone que monta o roteiro a partir de uma conversa. Você conta os planos, ele organiza cada dia, e o roteiro fica no celular mesmo sem internet. Meu primeiro app mobile: construí sozinho, do design ao backend, e lancei na App Store em outubro de 2026.',
+      },
+      {
         tag: 'FUNDADOR · ENGENHARIA',
         desc: 'Um conjunto de apps que movem lojas online no Brasil: frete, rastreio, parcelamento e desconto no Pix, cada um nativo no Wix e no Shopify. Como fundador e responsável pela engenharia, construí a infraestrutura compartilhada em que todo o ecossistema roda, e sigo lançando novos apps sobre ela.',
         stats: [
           { v: '2 mi+', l: 'operações / mês' },
-          { v: '8.500+', l: 'lojistas atendidos' },
+          { v: '10 mil+', l: 'lojistas atendidos' },
         ],
       },
       {
@@ -171,49 +171,39 @@ const I18N = {
         full: 'Agência digital entregando sites e produto para clientes. Mão na massa em design e desenvolvimento, lançando sites polidos e performáticos em prazos curtos.',
       },
     ],
-    services: {
-      idx: '02 / SERVIÇOS',
-      title: 'Como ajudo founders',
-      positioning: 'Founders costumam escolher entre uma contratação sênior lenta, uma agência que não pensa produto, ou um freelancer que não escala. Eu sou a outra opção: um founder que projeta, constrói e lança o seu produto como se fosse meu.',
-      forWho: 'Para founders product-led, do pre-seed ao seed, que precisam de um v1 real em semanas, não de um time em meses.',
-      howLabel: 'COMO FUNCIONA',
-      howText: 'Sem overhead de agência, sem contratados rotativos, sem proposta longa. Você fala com quem constrói, e a gente começa com uma call grátis de 15 minutos.',
-      credLabel: 'CREDENCIAIS',
-      credBefore: 'Engenheiro de Software no ',
-      credMid: ' (Tel Aviv) e founder do ',
-      credAfter: ' (2 mi+ operações/mês). Entregando para times em cinco continentes.',
+    now: {
+      idx: '02 / AGORA · NOV 2026',
+      title: 'No que estou trabalhando',
+      subtitle: 'De dia, engenharia no Wix. No resto do tempo, construindo os meus próprios produtos.',
     },
-    serviceItems: [
-      { title: 'Da ideia ao v1 no ar', desc: 'O caminho mais rápido para algo que usuários reais tocam. AI-native, entrego em semanas, sobre fundações que aguentam o crescimento.' },
-      { title: 'Uma pessoa, o produto inteiro', desc: 'Design, frontend, backend e a infraestrutura por baixo. Sem handoff, sem esperar um designer, sem imposto de coordenação.' },
-      { title: 'Feito para escalar, não para refazer', desc: 'O mesmo padrão de produção que entrego no Wix. Um v1 que você cresce em cima, não um que joga fora.' },
-      { title: 'Um parceiro, não um executor de tickets', desc: 'No seu Slack e nas decisões de arquitetura, decidindo os trade-offs com você. Um ou dois founders por vez.' },
+    nowFronts: [
+      { role: 'ENGENHEIRO DE SOFTWARE', desc: 'Entregando produto em escala enterprise, para times no mundo todo.' },
+      { role: 'FOUNDER', desc: 'Apps de frete, rastreio, parcelamento e Pix para mais de 10 mil lojistas no Wix e no Shopify.' },
+      { role: 'CONSTRUINDO SOZINHO', desc: 'Meu primeiro app mobile, um planner de viagem por conversa. Na App Store desde outubro.' },
+      { role: 'ENGENHEIRO FUNDADOR', desc: 'Uma plataforma com IA que cria em minutos o conteúdo de redes sociais das escolas, com a cara de cada marca.' },
     ],
     about: {
       idx: '03 / SOBRE',
-      title: 'Onde estou agora',
-      bio: 'Sou engenheiro de software, e founder. De dia entrego em escala enterprise no Wix; também fundei e cresci meus próprios produtos, como o Meu Ecommerce, que hoje processa mais de 2 milhões de operações por mês. Então quando construo com você, decido como dono, porque sou um. Já construí para times no Japão, Nova Zelândia, Califórnia, França e Brasil, à vontade entre fusos e culturas.',
+      title: 'Um pouco sobre mim',
+      bio: 'Sou engenheiro de software e founder. Aos nove anos decidi que ia passar a vida criando coisas que as pessoas amassem usar, e esse continua sendo o trabalho. De dia entrego em escala enterprise no Wix. Fora dele, fundei o Meu Ecommerce, que hoje atende mais de 10 mil lojistas, e construí sozinho o Cordel, meu primeiro app para iPhone. No caminho, já construí para times no Japão, Nova Zelândia, Califórnia, França e Brasil.',
       offLabel: 'FORA DO EXPEDIENTE',
       offBio: 'Quando não estou codando, você me verá treinando na academia, piscina ou parque. Baseado em São Paulo e sempre planejando a próxima viagem, a consistência que levo para o treino é a mesma que levo para o trabalho.',
       funTitle: 'Curiosidades',
     },
-    nowItems: [
-      'Aberto a 1–2 novas parcerias com founders neste trimestre.',
-      'Entregando produto de ponta a ponta no Wix, afiado em escala.',
-      'Crescendo o Meu Ecommerce e o educa.social, e ajudando times no início a irem mais rápido.',
-    ],
     funFacts: [
-      { title: 'Baseado em São Paulo, Brasil', sub: 'Construindo com founders em vários fusos.' },
+      { title: 'Baseado em São Paulo, Brasil', sub: 'Trabalhando com times em vários fusos.' },
       { title: 'CrossFit, academia e natação', sub: 'Treino é inegociável.' },
       { title: 'Corro quase toda manhã', sub: 'Limpa a mente, alimenta o foco.' },
       { title: 'Sempre planejando a próxima viagem', sub: 'Viajar me mantém curioso.' },
     ],
     contact: {
       idx: '04 / CONTATO',
-      title: 'Vamos construir algo',
-      subtitle: 'Tem uma ideia ou um produto no início? Me conta onde travou. A primeira call é de graça.',
+      title: 'Diga oi',
+      subtitle: 'Para falar de um projeto, de algum texto meu ou só dar um oi. Eu leio todas as mensagens.',
       bookTitle: 'Agendar uma call',
-      bookSub: 'Um papo gratuito de 15 min sobre sua ideia.',
+      bookSub: 'Um papo de 15 min sobre o seu projeto.',
+      newsletterTitle: 'Assinar a newsletter',
+      newsletterSub: 'Um texto novo a cada 15 dias, no seu e-mail.',
     },
   },
 }
@@ -232,8 +222,9 @@ const CARD_DATA = [
   {
     id: 'experience',
     tiles: [
-      { kind: 'card', tint: 'peach', labelKey: 'design', x: -11, y: 5, rot: -8 },
-      { kind: 'card', tint: 'purple', labelKey: 'mobileApps', x: 11, y: 4, rot: 9 },
+      { kind: 'logo', tint: 'blue', src: '/logos/wix-logo.svg', x: -15, y: 7, rot: -10 },
+      { kind: 'card', tint: 'peach', labelKey: 'ecom', x: 15, y: 7, rot: 10 },
+      { kind: 'shot', src: '/logos/cordel-icon.webp', x: 0, y: -3, rot: -1 },
     ],
   },
   {
@@ -257,10 +248,21 @@ const CARD_DATA = [
 // Founder ventures — rich treatment (role, description, stats, screenshots).
 const VENTURES = [
   {
+    id: 'cordel',
+    title: 'Cordel',
+    host: 'usecordel.com',
+    url: 'https://usecordel.com',
+    shots: [
+      { id: 'shot-cordel-conversation', src: '/shots/cordel-conversation.webp', variant: 'portrait' },
+      { id: 'shot-cordel-itinerary', src: '/shots/cordel-itinerary.webp', variant: 'portrait' },
+      { id: 'shot-cordel-home', src: '/shots/cordel-home.webp', variant: 'portrait' },
+    ],
+  },
+  {
     id: 'meuecom',
     title: 'Meu Ecommerce',
-    host: 'meuecommerce.ia.br',
-    url: 'https://www.meuecommerce.ia.br',
+    host: 'meuecommerce.com.br',
+    url: 'https://meuecommerce.com.br',
     shotsGrid: true,
     shots: [
       { id: 'shot-meuecom-frete', src: '/shots/meuecom-frete.webp', variant: 'app' },
@@ -343,10 +345,22 @@ const LOGOS = [
   { name: 'Billa', src: '/logos/billa.svg' },
 ]
 
+const NEWSLETTER_URL = 'https://soumatheusalexandre.substack.com'
+const CALL_URL = 'https://cal.com/matheusalexandre/intro-call'
+
 const CONTACTS = [
   { kind: 'EMAIL', handle: 'hello@matheus.cc', url: 'mailto:hello@matheus.cc', target: '_self' },
-  { kind: 'GITHUB', handle: '@matheuswix', url: 'https://github.com/matheuswix', target: '_blank' },
+  { kind: 'LINKEDIN', handle: '/soumatheusalexandre', url: 'https://www.linkedin.com/in/soumatheusalexandre/', target: '_blank' },
   { kind: 'INSTAGRAM', handle: '@soumatheusalexandre', url: 'https://instagram.com/soumatheusalexandre', target: '_blank' },
+  { kind: 'GITHUB', handle: '@matheuswix', url: 'https://github.com/matheuswix', target: '_blank' },
+]
+
+// The four things I'm working on right now. Copy (role, description) lives in I18N.nowFronts.
+const NOW_FRONTS = [
+  { name: 'Wix', logo: '/logos/wix-logo.svg' },
+  { name: 'Meu Ecommerce', host: 'meuecommerce.com.br', url: 'https://meuecommerce.com.br' },
+  { name: 'Cordel', logo: '/logos/cordel-icon.webp', host: 'App Store', url: 'https://apps.apple.com/br/app/cordel/id6810864343' },
+  { name: 'educa.social', host: 'educa.social', url: 'https://educa.social/' },
 ]
 
 const pad2 = (i) => String(i + 1).padStart(2, '0')
@@ -533,56 +547,55 @@ function WorkModal({ t }) {
   )
 }
 
-function ServicesModal({ t }) {
-  return (
-    <div>
-      <div className="section-index">{t.services.idx}</div>
-      <h2>{t.services.title}</h2>
-      <p className="modal-subtitle modal-subtitle--tight">{t.services.positioning}</p>
-      <div className="for-who">{t.services.forWho}</div>
-      <div className="services-grid">
-        {t.serviceItems.map((s, i) => (
-          <div key={i} className="service-cell">
-            <div className="service-index">{pad2(i)}</div>
-            <div className="service-title">{s.title}</div>
-            <p className="service-desc">{s.desc}</p>
-          </div>
-        ))}
-      </div>
-      <div className="how-work">
-        <span className="how-work-label">{t.services.howLabel}</span>
-        <p className="how-work-text">{t.services.howText}</p>
-      </div>
-      <div className="credentials">
-        <span className="credentials-label">{t.services.credLabel}</span>
-        <span className="spacer" />
-        <span className="credentials-text">
-          {t.services.credBefore}
-          <strong>Wix</strong>
-          {t.services.credMid}
-          <strong>Meu Ecommerce</strong>
-          {t.services.credAfter}
-        </span>
-      </div>
-    </div>
-  )
-}
-
-function NowModal({ t }) {
+function NowFrontsModal({ t }) {
   return (
     <div>
       <div className="now-eyebrow">
         <span className="now-dot" />
-        <div className="section-index">{t.about.idx}</div>
+        <div className="section-index">{t.now.idx}</div>
       </div>
+      <h2>{t.now.title}</h2>
+      <p className="modal-subtitle">{t.now.subtitle}</p>
+      <div className="services-grid">
+        {NOW_FRONTS.map((f, i) => {
+          const body = (
+            <>
+              <div className="service-index">{t.nowFronts[i].role}</div>
+              <div className="service-title">{f.name}</div>
+              <p className="service-desc">{t.nowFronts[i].desc}</p>
+              {f.url && (
+                <span className="front-link">
+                  {f.host} <span className="arrow">&#8599;</span>
+                </span>
+              )}
+            </>
+          )
+          return f.url ? (
+            <a
+              key={f.name}
+              className="service-cell service-cell--link"
+              href={f.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {body}
+            </a>
+          ) : (
+            <div key={f.name} className="service-cell">
+              {body}
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+function NowModal({ t }) {
+  return (
+    <div>
+      <div className="section-index">{t.about.idx}</div>
       <h2>{t.about.title}</h2>
       <p className="now-bio">{t.about.bio}</p>
-      {t.nowItems.map((text, i) => (
-        <div key={i} className="now-item">
-          <span className="row-index">{pad2(i)}</span>
-          <span className="now-item-text">{text}</span>
-        </div>
-      ))}
 
       <div className="off-clock">
         <div className="section-index">{t.about.offLabel}</div>
@@ -623,15 +636,17 @@ function ContactModal({ t }) {
       <div className="section-index">{t.contact.idx}</div>
       <h2>{t.contact.title}</h2>
       <p className="modal-subtitle">{t.contact.subtitle}</p>
-      <a
-        className="book-call"
-        href="https://cal.com/matheusalexandre/intro-call"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a className="book-call" href={CALL_URL} target="_blank" rel="noopener noreferrer">
         <span>
           <span className="book-call-title">{t.contact.bookTitle}</span>
           <span className="book-call-sub">{t.contact.bookSub}</span>
+        </span>
+        <span className="book-call-arrow">&#8599;</span>
+      </a>
+      <a className="book-call book-call--light" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
+        <span>
+          <span className="book-call-title">{t.contact.newsletterTitle}</span>
+          <span className="book-call-sub">{t.contact.newsletterSub}</span>
         </span>
         <span className="book-call-arrow">&#8599;</span>
       </a>
@@ -654,7 +669,7 @@ function ContactModal({ t }) {
 
 const MODALS = {
   work: WorkModal,
-  experience: ServicesModal,
+  experience: NowFrontsModal,
   now: NowModal,
   contact: ContactModal,
 }
@@ -693,29 +708,29 @@ function PreviewLayer({ hovered, t }) {
       </div>
 
       <div className={'preview-set' + (hovered === 'experience' ? ' is-active' : '')}>
-        {t.serviceItems.map((s, i) => (
-          <PreviewItem key={i} pos={POS4[i]} rot={ROT4[i]} delay={i * 60}>
+        {NOW_FRONTS.map((f, i) => (
+          <PreviewItem key={f.name} pos={POS4[i]} rot={ROT4[i]} delay={i * 60}>
             <div className="preview-card">
-              <div className="preview-card-index">{pad2(i)}</div>
-              <div className="preview-card-title">{s.title}</div>
+              <div className="preview-card-index">{t.nowFronts[i].role}</div>
+              <div className="preview-card-title">{f.name}</div>
             </div>
           </PreviewItem>
         ))}
       </div>
 
       <div className={'preview-set' + (hovered === 'now' ? ' is-active' : '')}>
-        {t.nowItems.map((text, i) => (
+        {t.funFacts.slice(0, 3).map((f, i) => (
           <PreviewItem key={i} pos={['tl', 'tr', 'br'][i]} rot={ROT4[i]} delay={i * 60}>
             <div className="preview-card preview-card--now">
               <span className="now-dot" />
-              <span className="preview-card-text">{text}</span>
+              <span className="preview-card-text">{f.title}</span>
             </div>
           </PreviewItem>
         ))}
       </div>
 
       <div className={'preview-set' + (hovered === 'contact' ? ' is-active' : '')}>
-        {CONTACTS.map((c, i) => (
+        {CONTACTS.slice(0, 3).map((c, i) => (
           <PreviewItem key={c.kind} pos={POS4[i]} rot={ROT4[i]} delay={i * 60}>
             <div className="preview-pill">
               <span className="preview-pill-kind">{c.kind}</span>
@@ -947,16 +962,11 @@ export default function App() {
             </div>
           </div>
           <div className="cta-row">
-            <a className="btn btn-primary" href="mailto:hello@matheus.cc">
-              {t.ctaStart}
+            <a className="btn btn-primary" href={CALL_URL} target="_blank" rel="noopener noreferrer">
+              {t.ctaCall}
             </a>
-            <a
-              className="btn btn-secondary"
-              href="https://github.com/matheuswix"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
+            <a className="btn btn-secondary" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
+              {t.ctaNewsletter}
             </a>
           </div>
           <div className="footnote">{t.footnote}</div>
@@ -995,16 +1005,11 @@ export default function App() {
 
       {/* Mobile-only sticky action bar */}
       <div className="mobile-bar">
-        <a className="btn btn-primary" href="mailto:hello@matheus.cc">
-          Email
+        <a className="btn btn-primary" href={CALL_URL} target="_blank" rel="noopener noreferrer">
+          {t.ctaCall}
         </a>
-        <a
-          className="btn btn-secondary"
-          href="https://cal.com/matheusalexandre/intro-call"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t.contact.bookTitle}
+        <a className="btn btn-secondary" href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">
+          Newsletter
         </a>
       </div>
     </div>

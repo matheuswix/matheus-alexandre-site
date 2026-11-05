@@ -1151,6 +1151,30 @@ a {
   font-size: 13.5px;
   line-height: 1.55;
 }
+.service-cell--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.25, 1), background 0.3s, border-color 0.3s,
+    box-shadow 0.3s;
+}
+.service-cell--link:hover,
+.service-cell--link:focus-visible {
+  transform: translateY(-2px);
+  background: #fff;
+  border-color: #e2e2e2;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.front-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11.5px;
+  color: #6d6d6d;
+}
+.service-cell--link:hover .front-link {
+  color: #0e0e0e;
+}
 .credentials {
   display: flex;
   align-items: center;
@@ -1380,6 +1404,15 @@ a {
 }
 .book-call-arrow {
   font-size: 20px;
+}
+/* Secondary CTA under the call card: same shape, light so the call stays the primary action. */
+.book-call--light {
+  background: #f1f1f1;
+  color: #0e0e0e;
+  margin-top: -10px;
+}
+.book-call--light .book-call-sub {
+  color: #5f5f5f;
 }
 .contact-row {
   display: flex;
